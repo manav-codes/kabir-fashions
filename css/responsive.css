@@ -1,0 +1,82 @@
+/* ================================
+   Responsive Adjustments
+   Mobile-first tweaks for key breakpoints
+   ================================ */
+
+/* ---------- Global Typography ---------- */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .section-subheading {
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+/* ---------- Hero Section (Homepage) ---------- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-heading {
+    font-size: 2.1rem;
+  }
+
+  .hero-subheading {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Grids ---------- */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Homepage About Strip ---------- */
+@media (max-width: 768px) {
+  .about-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    text-align: center;
+  }
+}
+
+/* ---------- Contact Page Layout ---------- */
+@media (max-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ---------- Footer ---------- */
+@media (max-width: 768px) {
+  .footer-main {
+    padding: 2.5rem 0;
+  }
+}
+
