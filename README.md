@@ -1,6 +1,6 @@
 # Kabir Fashions – Static Catalogue Website
 
-This project is a simple, elegant, **B2C clothing catalogue** for an Indian clothing manufacturer called **Kabir Fashions**.  
+This project is a simple, elegant, **B2B clothing catalogue** for an Indian clothing manufacturer called **Kabir Fashions**.  
 Customers can browse products and contact the owner directly on WhatsApp. There is **no cart, no login and no payment flow** – it is a pure catalogue plus contact site.
 
 ---
