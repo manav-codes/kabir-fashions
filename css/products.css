@@ -12,6 +12,7 @@
 .product-card {
   background-color: var(--color-white);
   border: 1px solid var(--color-border);
+  border-radius: 8px;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -63,23 +64,25 @@
 
 /* ---------- Filter Bar ---------- */
 .filter-bar {
-  background-color: var(--color-secondary);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-primary);
+  border-bottom: none;
+  padding: 0;
 }
 
 .filter-bar-inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  padding: 1rem 0;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
 }
 
 .filter-btn {
-  padding: 0.45rem 1.3rem;
+  padding: 0.25rem 0.8rem;
   border: 1px solid var(--color-primary);
+  border-radius: 50px;
   background-color: transparent;
   color: var(--color-primary);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   cursor: pointer;
@@ -113,6 +116,7 @@
 
 .product-gallery__main {
   border: 1px solid var(--color-border);
+  border-radius: 8px;
   background-color: var(--color-white);
   padding: 0.75rem;
 }
@@ -180,6 +184,7 @@
   min-width: 42px;
   padding: 0.45rem 0.85rem;
   border: 1px solid var(--color-primary);
+  border-radius: 50px;
   text-align: center;
   font-size: 0.85rem;
   text-transform: uppercase;

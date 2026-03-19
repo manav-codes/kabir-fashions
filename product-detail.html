@@ -61,98 +61,101 @@
     <main>
       <!-- ===== Product Detail Layout ===== -->
       <section class="product-detail">
-        <div class="container product-detail-inner">
-          <!-- Product image gallery using CSS-only :target panels -->
-          <div class="product-gallery">
-            <div class="product-gallery__main">
-              <!-- Main image panels, each linked via :target -->
-              <div
-                id="img1"
-                class="product-image-panel image-placeholder image-placeholder--hero"
-              >
-                Product Image
-              </div>
-              <div
-                id="img2"
-                class="product-image-panel image-placeholder image-placeholder--hero"
-              >
-                Product Image
-              </div>
-              <div
-                id="img3"
-                class="product-image-panel image-placeholder image-placeholder--hero"
-              >
-                Product Image
-              </div>
-            </div>
-            <div class="product-gallery__thumbnails">
-              <!-- Thumbnails that change the main image via anchors -->
-              <a href="#img1" class="product-gallery__thumbnail">
-                <div
-                  class="image-placeholder image-placeholder--thumbnail"
-                >
-                  Product Image
+        <div class="container">
+          <div class="content-card">
+            <div class="product-detail-inner">
+              <!-- Product image gallery using CSS-only :target panels -->
+              <div class="product-gallery">
+                <div class="product-gallery__main">
+                  <!-- Main image panels, each linked via :target -->
+                  <div
+                    id="img1"
+                    class="product-image-panel image-placeholder image-placeholder--hero"
+                  >
+                    Product Image
+                  </div>
+                  <div
+                    id="img2"
+                    class="product-image-panel image-placeholder image-placeholder--hero"
+                  >
+                    Product Image
+                  </div>
+                  <div
+                    id="img3"
+                    class="product-image-panel image-placeholder image-placeholder--hero"
+                  >
+                    Product Image
+                  </div>
                 </div>
-              </a>
-              <a href="#img2" class="product-gallery__thumbnail">
-                <div
-                  class="image-placeholder image-placeholder--thumbnail"
-                >
-                  Product Image
+                <div class="product-gallery__thumbnails">
+                  <!-- Thumbnails that change the main image via anchors -->
+                  <a href="#img1" class="product-gallery__thumbnail">
+                    <div
+                      class="image-placeholder image-placeholder--thumbnail"
+                    >
+                      Product Image
+                    </div>
+                  </a>
+                  <a href="#img2" class="product-gallery__thumbnail">
+                    <div
+                      class="image-placeholder image-placeholder--thumbnail"
+                    >
+                      Product Image
+                    </div>
+                  </a>
+                  <a href="#img3" class="product-gallery__thumbnail">
+                    <div
+                      class="image-placeholder image-placeholder--thumbnail"
+                    >
+                      Product Image
+                    </div>
+                  </a>
                 </div>
-              </a>
-              <a href="#img3" class="product-gallery__thumbnail">
-                <div
-                  class="image-placeholder image-placeholder--thumbnail"
-                >
-                  Product Image
+              </div>
+
+              <!-- Product information and purchase enquiry details -->
+              <div class="product-detail-info">
+                <p class="product-detail-info__category">Kurtas</p>
+                <h1 class="product-detail-info__name">Classic Cotton Kurta</h1>
+
+                <div class="divider"></div>
+
+                <p class="product-detail-info__description">
+                  A versatile cotton kurta designed for everyday comfort and refined
+                  style. Thoughtfully tailored with a straight fit, subtle detailing
+                  and breathable fabric that works across seasons. Ideal for
+                  gatherings, workdays or relaxed evenings.
+                </p>
+                <p class="product-detail-info__description mt-3">
+                  Each piece from Kabir Fashions is crafted to balance traditional
+                  Indian silhouettes with modern simplicity, making it easy to
+                  dress up or down with your existing wardrobe.
+                </p>
+
+                <!-- Size selector (visual only) -->
+                <div class="size-selector">
+                  <button class="size-option" type="button">S</button>
+                  <button class="size-option" type="button">M</button>
+                  <button class="size-option" type="button">L</button>
+                  <button class="size-option" type="button">XL</button>
                 </div>
-              </a>
-            </div>
-          </div>
 
-          <!-- Product information and purchase enquiry details -->
-          <div class="product-detail-info">
-            <p class="product-detail-info__category">Kurtas</p>
-            <h1 class="product-detail-info__name">Classic Cotton Kurta</h1>
-            <p class="product-detail-info__price">₹1,499</p>
-
-            <div class="divider"></div>
-
-            <p class="product-detail-info__description">
-              A versatile cotton kurta designed for everyday comfort and refined
-              style. Thoughtfully tailored with a straight fit, subtle detailing
-              and breathable fabric that works across seasons. Ideal for
-              gatherings, workdays or relaxed evenings.
-            </p>
-            <p class="product-detail-info__description mt-3">
-              Each piece from Kabir Fashions is crafted to balance traditional
-              Indian silhouettes with modern simplicity, making it easy to
-              dress up or down with your existing wardrobe.
-            </p>
-
-            <!-- Size selector (visual only) -->
-            <div class="size-selector">
-              <button class="size-option" type="button">S</button>
-              <button class="size-option" type="button">M</button>
-              <button class="size-option" type="button">L</button>
-              <button class="size-option" type="button">XL</button>
-            </div>
-
-            <!-- WhatsApp enquiry button -->
-            <div class="mt-4">
-              <a
-                href="https://wa.me/919327769799"
-                class="btn btn-whatsapp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ✆ Contact on WhatsApp
-              </a>
-              <p class="product-detail-info__note">
-                We'll respond within 2 hours with availability and sizing
-                details.
-              </p>
+                <!-- WhatsApp enquiry button -->
+                <div class="mt-4">
+                  <a
+                    href="https://wa.me/919327769799"
+                    class="btn btn-whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ✆ Contact on WhatsApp
+                  </a>
+                  <p class="product-detail-info__note">
+                    We'll respond within 2 hours with availability and sizing
+                    details.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -161,59 +164,57 @@
       <!-- ===== Related Products ===== -->
       <section class="section related-products">
         <div class="container">
-          <h2 class="section-heading">You May Also Like</h2>
-          <p class="section-subheading">
-            Explore more styles from Kabir Fashions.
-          </p>
+          <div class="content-card">
+            <h2 class="section-heading">You May Also Like</h2>
+            <p class="section-subheading">
+              Explore more styles from Kabir Fashions.
+            </p>
 
-          <div class="product-grid grid grid-4">
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Kurtas</p>
-              <h3 class="product-card__name">Textured Formal Kurta</h3>
-              <p class="product-card__price">₹1,899</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
+            <div class="product-grid grid grid-4">
+              <article class="product-card">
+                <div class="product-card__image image-placeholder image-placeholder--square">
+                  Product Image
+                </div>
+                <p class="product-card__category">Kurtas</p>
+                <h3 class="product-card__name">Textured Formal Kurta</h3>
+                <a href="product-detail.html" class="product-card__link">
+                  View Details
+                </a>
+              </article>
 
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Shirts</p>
-              <h3 class="product-card__name">Premium Oxford Shirt</h3>
-              <p class="product-card__price">₹1,999</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
+              <article class="product-card">
+                <div class="product-card__image image-placeholder image-placeholder--square">
+                  Product Image
+                </div>
+                <p class="product-card__category">Kurtas</p>
+                <h3 class="product-card__name">Embroidered Festive Kurta</h3>
+                <a href="product-detail.html" class="product-card__link">
+                  View Details
+                </a>
+              </article>
 
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Trousers</p>
-              <h3 class="product-card__name">Tailored Cotton Trouser</h3>
-              <p class="product-card__price">₹1,899</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
+              <article class="product-card">
+                <div class="product-card__image image-placeholder image-placeholder--square">
+                  Product Image
+                </div>
+                <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+                <h3 class="product-card__name">Cotton Co-ord Set</h3>
+                <a href="product-detail.html" class="product-card__link">
+                  View Details
+                </a>
+              </article>
 
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Sarees</p>
-              <h3 class="product-card__name">Handloom Cotton Saree</h3>
-              <p class="product-card__price">₹2,499</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
+              <article class="product-card">
+                <div class="product-card__image image-placeholder image-placeholder--square">
+                  Product Image
+                </div>
+                <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+                <h3 class="product-card__name">Classic 3 Piece Set</h3>
+                <a href="product-detail.html" class="product-card__link">
+                  View Details
+                </a>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -228,7 +229,7 @@
           <div>
             <div class="footer-logo">Kabir Fashions</div>
             <p class="footer-description">
-              Premium Indian clothing crafted with care for everyday elegance.
+              Premium Indian clothing at affordable rates
             </p>
           </div>
           <div>

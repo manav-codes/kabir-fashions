@@ -1,235 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta information for Kabir Fashions homepage -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kabir Fashions | Premium Indian Clothing Catalogue</title>
-    <!-- Google Fonts -->
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Global and component styles -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/products.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-  <body>
-    <!-- =========================
+
+<head>
+  <!-- Meta information for Kabir Fashions homepage -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kabir Fashions | Premium Indian Clothing Catalogue</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- Global and component styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+  <!-- =========================
          Global Site Header & Navbar
          ========================= -->
-    <header class="site-header">
-      <nav class="navbar">
-        <div class="navbar-inner container">
-          <!-- Brand logo / wordmark -->
-          <a href="index.html" class="navbar-logo">
-            <img src="images/logo.png" alt="Kabir Fashions" />
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-inner container">
+        <!-- Brand logo / wordmark -->
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo.png" alt="Kabir Fashions" />
+        </a>
+
+        <!-- Mobile navigation toggle (CSS-only hamburger) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+
+        <!-- Primary navigation links -->
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================
+         Main Content
+         ========================= -->
+  <main>
+    <!-- ===== Hero Section: Key brand statement ===== -->
+    <section class="hero section">
+      <div class="container">
+        <div class="content-card hero-card">
+          <p class="hero-label">NEW COLLECTION 2026</p>
+          <h1 class="hero-heading">Crafted With Care</h1>
+          <p class="hero-subheading">
+            Premium clothing made for everyday elegance.
+          </p>
+          <a href="products.html" class="btn hero-cta">View Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Filter Bar (visual only, no JS) ===== -->
+    <section class="filter-bar">
+      <div class="container">
+        <div class="content-card filter-card">
+          <div class="filter-bar-inner">
+            <!-- NOTE: JavaScript-based filtering can be added later using these buttons -->
+            <button class="filter-btn filter-btn--active" type="button">
+              All
+            </button>
+            <button class="filter-btn" type="button">Kurtas</button>
+            <button class="filter-btn" type="button">Co-ord Sets</button>
+            <button class="filter-btn" type="button">3 Piece Sets</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Product Grid: 20 products ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="content-card">
+          <h2 class="section-heading">Our Collection</h2>
+          <p class="section-subheading">
+            Handpicked styles for every occasion.
+          </p>
+
+          <div class="product-grid grid grid-3">
+            <!-- Kurtas (7 products) -->
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">Kurtas</p>
+              <h2 class="product-card__name">Classic Cotton Kurta</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">Kurtas</p>
+              <h2 class="product-card__name">Embroidered Festive Kurta</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">Kurtas</p>
+              <h2 class="product-card__name">Printed Anarkali Kurta</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">Kurtas</p>
+              <h2 class="product-card__name">Straight Cut Kurta</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">Kurtas</p>
+              <h2 class="product-card__name">A-Line Kurta</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">Kurtas</p>
+              <h2 class="product-card__name">Long Cotton Kurta</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">Kurtas</p>
+              <h2 class="product-card__name">Short Kurti Style</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <!-- Co-ord Sets (7 products) -->
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+              <h2 class="product-card__name">Cotton Co-ord Set</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+              <h2 class="product-card__name">Printed Kurta Palazzo Set</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+              <h2 class="product-card__name">Ethnic Trouser Co-ord</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+              <h2 class="product-card__name">Festive Co-ord Ensemble</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+              <h2 class="product-card__name">Casual Daywear Set</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+              <h2 class="product-card__name">Linen Blend Co-ord</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
+              <h2 class="product-card__name">Party Wear Co-ord Set</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <!-- 3 Piece Sets (6 products) -->
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+              <h2 class="product-card__name">Classic 3 Piece Set</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+              <h2 class="product-card__name">Festive 3 Piece Ensemble</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+              <h2 class="product-card__name">Wedding Guest 3 Piece</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+              <h2 class="product-card__name">Embroidered 3 Piece Set</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+              <h2 class="product-card__name">Silk Blend 3 Piece</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+              <h2 class="product-card__name">Cotton 3 Piece Comfort</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image image-placeholder image-placeholder--square">
+                Product Image
+              </div>
+              <p class="product-card__category">3 Piece Set – Top, Bottom & Dupatta</p>
+              <h2 class="product-card__name">Royal Blue 3 Piece</h2>
+              <a href="product-detail.html" class="product-card__link">
+                View Details
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WhatsApp Call-to-Action Banner ===== -->
+    <section class="whatsapp-cta">
+      <div class="container whatsapp-cta-inner">
+        <div>
+          <h2 class="whatsapp-cta-heading">Interested in a product?</h2>
+          <p class="whatsapp-cta-subtext">
+            Contact us directly on WhatsApp for orders and enquiries.
+          </p>
+        </div>
+        <div>
+          <a href="https://wa.me/919327769799" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <img src="images/whatsapp-icon.png" alt="" class="whatsapp-icon"> Chat on WhatsApp
           </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-          <!-- Mobile navigation toggle (CSS-only hamburger) -->
-          <input
-            type="checkbox"
-            id="nav-toggle"
-            class="nav-toggle"
-            aria-label="Toggle navigation"
-          />
-          <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-          </label>
+  <!-- =========================
+         Global Footer
+         ========================= -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <!-- Footer column: brand summary -->
+        <div>
+          <div class="footer-logo">Kabir Fashions</div>
+          <p class="footer-description">
+            Premium Indian clothing at affordable rates
+          </p>
+        </div>
 
-          <!-- Primary navigation links -->
-          <div class="nav-links">
+        <!-- Footer column: quick links -->
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="products.html">Products</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </div>
         </div>
-      </nav>
-    </header>
 
-    <!-- =========================
-         Main Content
-         ========================= -->
-    <main>
-      <!-- ===== Hero Section: Key brand statement ===== -->
-      <section class="hero section">
-        <div class="container">
-          <div class="hero-content">
-            <p class="hero-label">NEW COLLECTION 2026</p>
-            <h1 class="hero-heading">Crafted With Care</h1>
-            <p class="hero-subheading">
-              Premium clothing made for everyday elegance.
-            </p>
-            <a href="products.html" class="btn hero-cta">View Collection</a>
-          </div>
-        </div>
-      </section>
+        <!-- Footer column: contact information -->
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact">
+            <p>☎️Phone: <a href="tel:+919327769799">+91 93277 69799</a></p>
+            <p>📩Email: <a href="mailto:kabirfashions.kmt@gmail.com">kabirfashions.kmt@gmail.com</a></p>
+            <p>📍 <a href="https://maps.app.goo.gl/dQk291GyWFwBMRjY8" target="_blank" rel="noopener noreferrer">
+                Kabir Fashions, E-501-502, Fifth Floor,<br>
+                Iscon Commercial Centre, VIP Market,<br>
+                Opp Safal 1, Raipur,<br>
+                Ahmedabad, Gujarat – 380001
+              </a></p>
 
-      <!-- ===== About Strip: Quick brand assurances ===== -->
-      <section class="about-strip">
-        <div class="container">
-          <div class="about-strip-grid grid grid-3">
-            <div class="about-strip-item">
-              <h3>✦ Quality Fabric</h3>
-              <p>
-                Thoughtfully sourced textiles designed for lasting comfort and
-                feel.
-              </p>
-            </div>
-            <div class="about-strip-item">
-              <h3>✦ Trusted Since 2005</h3>
-              <p>
-                Nearly two decades of serving retailers and customers across
-                India.
-              </p>
-            </div>
-            <div class="about-strip-item">
-              <h3>✦ Pan India Delivery</h3>
-              <p>
-                Reliable dispatch to major cities and growing markets nationwide.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== Featured Products: Snapshot of catalogue ===== -->
-      <section class="section featured-products">
-        <div class="container">
-          <h2 class="section-heading">Our Collection</h2>
-          <p class="section-subheading">
-            Handpicked styles for every occasion.
-          </p>
-
-          <div class="product-grid grid grid-4">
-            <!-- Individual product cards as demo placeholders -->
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Kurtas</p>
-              <h3 class="product-card__name">Classic Cotton Kurta</h3>
-              <p class="product-card__price">₹1,499</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Shirts</p>
-              <h3 class="product-card__name">Everyday Linen Shirt</h3>
-              <p class="product-card__price">₹1,799</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Sarees</p>
-              <h3 class="product-card__name">Handloom Cotton Saree</h3>
-              <p class="product-card__price">₹2,499</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Trousers</p>
-              <h3 class="product-card__name">Tailored Cotton Trousers</h3>
-              <p class="product-card__price">₹1,899</p>
-              <a href="product-detail.html" class="product-card__link">
-                View Details
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== WhatsApp Call-to-Action Banner ===== -->
-      <section class="whatsapp-cta">
-        <div class="container whatsapp-cta-inner">
-          <div>
-            <h2 class="whatsapp-cta-heading">Interested in a product?</h2>
-            <p class="whatsapp-cta-subtext">
-              Contact us directly on WhatsApp for orders and enquiries.
-            </p>
-          </div>
-          <div>
-            <a
-              href="https://wa.me/919327769799"
-              class="btn btn-whatsapp"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ✆ Chat on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- =========================
-         Global Footer
-         ========================= -->
-    <footer class="site-footer">
-      <div class="footer-main">
-        <div class="container footer-grid">
-          <!-- Footer column: brand summary -->
-          <div>
-            <div class="footer-logo">Kabir Fashions</div>
-            <p class="footer-description">
-              Premium Indian clothing crafted with care for everyday elegance.
-            </p>
-          </div>
-
-          <!-- Footer column: quick links -->
-          <div>
-            <div class="footer-heading">Quick Links</div>
-            <div class="footer-links">
-              <a href="index.html">Home</a>
-              <a href="products.html">Products</a>
-              <a href="about.html">About</a>
-              <a href="contact.html">Contact</a>
-            </div>
-          </div>
-
-          <!-- Footer column: contact information -->
-          <div>
-            <div class="footer-heading">Contact</div>
-            <div class="footer-contact">
-              <p>Phone: +91 93277 69799</p>
-              <p>Email: info@kabirfashions.in</p>
-              <p>Ahmedabad, Gujarat, India</p>
-            </div>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        © 2026 Kabir Fashions. All rights reserved.
-      </div>
-    </footer>
-  </body>
-</html>
-
+    </div>
+    <div class="footer-bottom">
+      © 2026 Kabir Fashions. All rights reserved.
+    </div>
+  </footer>
+    <script src="js/filter.js"></script>
+</body>
+</html>

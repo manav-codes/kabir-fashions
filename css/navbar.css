@@ -19,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 1.5rem;
+  padding: 0 1.5rem;
 }
 
 .navbar-logo {
@@ -34,6 +34,10 @@
     font-size: 1.3rem;
     position: relative;
     z-index: 1001;
+  }
+
+  .navbar-logo img {
+    height: 27px;
   }
 }
 
@@ -54,6 +58,8 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .nav-links a:hover,
@@ -69,7 +75,7 @@
 .nav-toggle-label {
   display: none;
   cursor: pointer;
-  padding: 0.35rem;
+  padding: 0.4rem;
 }
 
 .nav-toggle-label span,
@@ -77,9 +83,9 @@
 .nav-toggle-label span::after {
   display: block;
   background-color: var(--color-text-light);
-  height: 2px;
-  width: 22px;
-  border-radius: 0;
+  height: 2.5px;
+  width: 24px;
+  border-radius: 2px;
   position: relative;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -92,11 +98,11 @@
 }
 
 .nav-toggle-label span::before {
-  top: -6px;
+  top: -7px;
 }
 
 .nav-toggle-label span::after {
-  top: 6px;
+  top: 7px;
 }
 
 /* Checkbox checked state transforms the icon */
@@ -139,7 +145,7 @@
 }
 
 .navbar-logo img {
-  height: 40px;
+  height: 75px;
   width: auto;
   display: block;
 }
