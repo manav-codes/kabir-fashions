@@ -3,6 +3,14 @@
    Mobile-first tweaks for key breakpoints
    ================================ */
 
+@media (max-width: 768px) {
+  .site-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
 /* ---------- Global Typography ---------- */
 @media (max-width: 768px) {
   .section {
