@@ -1,0 +1,298 @@
+/* ================================
+   Animations & Micro-Interactions
+   Scroll-reveal, hover polish, transitions
+   ================================ */
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ---------- Scroll Reveal (driven by JS adding .is-visible) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children inside a reveal group */
+.reveal-group .reveal:nth-child(1) { transition-delay: 0s; }
+.reveal-group .reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal-group .reveal:nth-child(3) { transition-delay: 0.15s; }
+.reveal-group .reveal:nth-child(4) { transition-delay: 0.2s; }
+.reveal-group .reveal:nth-child(5) { transition-delay: 0.25s; }
+.reveal-group .reveal:nth-child(6) { transition-delay: 0.3s; }
+
+/* ---------- Page Load Animations ---------- */
+.hero-card {
+  animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-label {
+  animation: fadeIn 0.8s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-heading {
+  animation: fadeInUp 0.8s 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-subheading {
+  animation: fadeIn 0.8s 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-cta {
+  animation: fadeInUp 0.7s 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---------- Enhanced Button Interactions ---------- */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.15) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover::after {
+  opacity: 1;
+  animation: shimmer 1.2s ease forwards;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* WhatsApp CTA floating pulse */
+.btn-whatsapp {
+  transition: background-color 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+}
+
+/* ---------- Enhanced Product Card Hover ---------- */
+.product-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image zoom on card hover */
+.product-card__image {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.product-card__image img,
+.product-card__image {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.product-card:hover .product-card__image img,
+.product-card:hover .product-card__image {
+  transform: scale(1.05);
+}
+
+/* Link arrow animation */
+.product-card__link {
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.product-card__link:hover {
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Values Cards (About page) ---------- */
+.values-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+
+.values-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-secondary);
+}
+
+/* ---------- Content Card Subtle Entrance ---------- */
+.content-card {
+  transition: box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Filter Button Enhanced ---------- */
+.filter-btn {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              transform 0.2s ease,
+              box-shadow 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn:active {
+  transform: translateY(0);
+}
+
+/* ---------- Footer Link Hover Effects ---------- */
+.footer-links a {
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+  padding-left: 0.4rem;
+  color: var(--color-border);
+}
+
+.footer-contact a {
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--color-border);
+}
+
+/* ---------- Nav Link Hover Glow ---------- */
+.nav-links a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 8px rgba(240, 235, 216, 0.4);
+}
+
+/* ---------- About Page Owner Image ---------- */
+.about-hero-image img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s ease;
+}
+
+.about-hero-image:hover img {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- WhatsApp CTA Section ---------- */
+.whatsapp-cta-heading {
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---------- Smooth Scrollbar Styling ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8f6554;
+}
+
+/* ---------- Selection Color ---------- */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+/* ---------- Reduced Motion Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
