@@ -106,16 +106,16 @@
 }
 
 /* Checkbox checked state transforms the icon */
-.nav-toggle:checked + .nav-toggle-label span {
+.nav-toggle:checked+.nav-toggle-label span {
   transform: rotate(45deg);
 }
 
-.nav-toggle:checked + .nav-toggle-label span::before {
+.nav-toggle:checked+.nav-toggle-label span::before {
   transform: rotate(90deg);
   top: 0;
 }
 
-.nav-toggle:checked + .nav-toggle-label span::after {
+.nav-toggle:checked+.nav-toggle-label span::after {
   opacity: 0;
 }
 
@@ -139,7 +139,7 @@
     transition: transform 0.2s ease;
   }
 
-  .nav-toggle:checked ~ .nav-links {
+  .nav-toggle:checked~.nav-links {
     transform: translateY(0%);
   }
 }
@@ -149,4 +149,3 @@
   width: auto;
   display: block;
 }
-
