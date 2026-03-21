@@ -1,24 +1,17 @@
-﻿1. Open the relevant 'index.html' file (e.g. inside the 'home' or 'products' folder) in a code editor.
-2. Find the product card you want to edit — each is an 'article.product-card' block.
-3. Update the name, category or image as needed.
-   * **To add a product** — duplicate an entire 'article.product-card' block and edit it.
-   * **To remove a product** — delete the entire 'article.product-card' block.
-4. Save, commit and push — live site updates in 30 seconds.
-
-**To add a real product image:**
+﻿# Kabir Fashions — Clothing Catalogue Website
 
 **Live site:** [kabirfashions.in](https://kabirfashions.in)
 
-*A clean, professional clothing catalogue website built for a real client â€” browsable on any device, with direct WhatsApp ordering.*
+*A clean, professional clothing catalogue website built for a real client — browsable on any device, with direct WhatsApp ordering.*
 
 ---
 
 ## Overview
 Kabir Fashions is an Indian clothing manufacturer based in Ahmedabad, Gujarat. They needed a simple, beautiful online presence to showcase their clothing line to customers.
 
-This website lets customers browse the full product catalogue, filter by category, view product details, and contact the owner instantly via WhatsApp. No accounts, no checkout, no friction â€” just browse and connect.
+This website lets customers browse the full product catalogue, filter by category, view product details, and contact the owner instantly via WhatsApp. No accounts, no checkout, no friction — just browse and connect.
 
-Built as a freelance project using only HTML, CSS, and a small amount of JavaScript. No frameworks, no backend, no database â€” intentionally lightweight so it loads fast and is easy to maintain.
+Built as a freelance project using only HTML, CSS, and a small amount of JavaScript. No frameworks, no backend, no database — intentionally lightweight so it loads fast and is easy to maintain.
 
 ---
 
@@ -54,51 +47,53 @@ Built with vanilla HTML, CSS, and JavaScript. No build tools, no package manager
 
 ## Product Categories
 * Kurtas
-* Co-ord Sets (2 Piece â€” Top & Bottom)
+* Co-ord Sets (2 Piece — Top & Bottom)
 * 3 Piece Sets (Top, Bottom & Dupatta)
 
 ## Pages
-* `index.html` â€” Homepage with hero banner and full product catalogue
-* `products.html` â€” Full catalogue with live category filtering
-* `product-detail.html` â€” Single product with image gallery and size selector
-* `about.html` â€” Brand story and values
-* `contact.html` â€” Contact details, Google Maps link and enquiry form
+* `/` — Homepage with hero banner and full product catalogue
+* `/products/` — Full catalogue with live category filtering
+* `/product-detail/` — Single product with image gallery and size selector
+* `/about/` — Brand story and values
+* `/contact/` — Contact details, Google Maps link and enquiry form
 
 ---
 
 ## File Structure
 ```text
 kabir-fashions/
-â”œâ”€â”€ home.html
-â”œâ”€â”€ products.html
-â”œâ”€â”€ product-detail.html
-â”œâ”€â”€ about.html
-â”œâ”€â”€ contact.html
-â”œâ”€â”€ css/
-â”‚   â”œâ”€â”€ style.css        â€” global styles, variables, layout
-â”‚   â”œâ”€â”€ navbar.css       â€” sticky navbar and mobile hamburger
-â”‚   â”œâ”€â”€ footer.css       â€” footer layout
-â”‚   â”œâ”€â”€ products.css     â€” product cards, grid, filter, detail page
-â”‚   â””â”€â”€ responsive.css   â€” breakpoints for mobile and tablet
-â”œâ”€â”€ js/
-â”‚   â””â”€â”€ filter.js        â€” category filter logic
-â”œâ”€â”€ images/
-â”‚   â”œâ”€â”€ logo.jpeg
-â”‚   â”œâ”€â”€ products/        â€” product images go here
-â”‚   â””â”€â”€ hero/            â€” hero banner images go here
-â””â”€â”€ README.md
+├── index.html              — Root homepage (serves content directly)
+├── home/
+│   └── index.html          — Homepage with hero banner and full product catalogue
+├── products/
+│   └── index.html          — Full catalogue with live category filtering
+├── product-detail/
+│   └── index.html          — Single product with image gallery and size selector
+├── about/
+│   └── index.html          — Brand story and values
+├── contact/
+│   └── index.html          — Contact details, Google Maps link and enquiry form
+├── css/
+│   ├── style.css           — global styles, variables, layout
+│   ├── navbar.css          — sticky navbar and mobile hamburger
+│   ├── footer.css          — footer layout
+│   ├── products.css        — product cards, grid, filter, detail page
+│   ├── responsive.css      — breakpoints for mobile and tablet
+│   └── animations.css      — scroll reveal and fade animations
+├── js/
+│   ├── filter.js           — category filter logic
+│   └── scroll-reveal.js    — scroll animation triggers
+├── images/
+│   ├── logo.png
+│   ├── whatsapp.svg
+│   ├── products/           — product images go here
+│   └── hero/               — hero banner images go here
+└── README.md
 ```
 
 ---
 
-1. Open the relevant 'index.html' file (e.g. inside the 'home' or 'products' folder) in a code editor.
-2. Find the product card you want to edit — each is an 'article.product-card' block.
-3. Update the name, category or image as needed.
-   * **To add a product** — duplicate an entire 'article.product-card' block and edit it.
-   * **To remove a product** — delete the entire 'article.product-card' block.
-4. Save, commit and push — live site updates in 30 seconds.
-
-**To add a real product image:**
+## Design
 
 ### Colour Palette
 * **Primary:** `#a47764` (warm terracotta)
@@ -107,6 +102,7 @@ kabir-fashions/
 * **Text Mid:** `#6B4F3A`
 
 ### Fonts (Google Fonts)
+* **Logo:** Samarkan
 * **Headings:** Playfair Display
 * **Body:** Lato
 
@@ -135,11 +131,11 @@ cd kabir-fashions
 
 ## How to Update Products
 
-1. Open the relevant 'index.html' file (e.g. inside the 'home' or 'products' folder) in a code editor.
-2. Find the product card you want to edit — each is an 'article.product-card' block.
+1. Open `index.html` (root) or `products/index.html` in any code editor.
+2. Find the product card you want to edit — each is an `article.product-card` block.
 3. Update the name, category or image as needed.
-   * **To add a product** — duplicate an entire 'article.product-card' block and edit it.
-   * **To remove a product** — delete the entire 'article.product-card' block.
+   * **To add a product** — duplicate an entire `article.product-card` block and edit it.
+   * **To remove a product** — delete the entire `article.product-card` block.
 4. Save, commit and push — live site updates in 30 seconds.
 
 **To add a real product image:**
@@ -166,11 +162,11 @@ The site is hosted on **GitHub Pages** and deploys automatically on every push t
 
 **To deploy your own version:**
 1. Fork this repository
-2. Go to Settings â†’ Pages
+2. Go to Settings → Pages
 3. Set branch to `master`
 4. Your site will be live at `https://yourusername.github.io/kabir-fashions`
 
-**To connect a custom domain**, add your domain in Settings â†’ Pages â†’ Custom Domain, then add the following A records in your domain registrar's DNS settings:
+**To connect a custom domain**, add your domain in Settings → Pages → Custom Domain, then add the following A records in your domain registrar's DNS settings:
 ```text
 185.199.108.153
 185.199.109.153
@@ -212,18 +208,17 @@ The site is hosted on **GitHub Pages** and deploys automatically on every push t
 
 ## Author
 **Manav Sukhwani**
-* ðŸ“© [sukhwanimanav24@gmail.com](mailto:sukhwanimanav24@gmail.com)
-* ðŸ”— [github.com/manav-codes](https://github.com/manav-codes)
-* ðŸ’¼ [linkedin.com/in/manavsukhwani](https://linkedin.com/in/manavsukhwani)
+* 📩 [sukhwanimanav24@gmail.com](mailto:sukhwanimanav24@gmail.com)
+* 🔗 [github.com/manav-codes](https://github.com/manav-codes)
+* 💼 [linkedin.com/in/manavsukhwani](https://linkedin.com/in/manavsukhwani)
 
 ## Client
 **Ashwin Panjwani, Kabir Fashions**
-* ðŸ“ [E-501-502, Fifth Floor, Iscon Commercial Centre, 
+* 📍 [E-501-502, Fifth Floor, Iscon Commercial Centre, 
 VIP Market, Opp Safal 1, Raipur, 
-Ahmedabad, Gujarat â€” 380001](https://maps.app.goo.gl/XWd8AeQRCsiqvExEA)
-* ðŸ“© [kabirfashions.kmt@gmail.com](mailto:kabirfashions.kmt@gmail.com)
-* ðŸŒ [kabirfashions.in](https://kabirfashions.in)
+Ahmedabad, Gujarat — 380001](https://maps.app.goo.gl/Jzz3LBLCxeBLvmLN8)
+* 📩 [kabirfashions.kmt@gmail.com](mailto:kabirfashions.kmt@gmail.com)
+* 🌐 [kabirfashions.in](https://kabirfashions.in)
 
 ## License
 This project was built for a private client. Code is publicly visible for portfolio purposes. Do not reuse or redistribute without permission.
-
