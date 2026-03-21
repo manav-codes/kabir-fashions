@@ -83,12 +83,15 @@
 
 .filter-bar-inner {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
   padding: 0.5rem 0;
+  justify-content: space-between;
 }
 
 .filter-btn {
+  flex: 1;
+  text-align: center;
   padding: 0.25rem 0.8rem;
   border: 1px solid var(--color-primary);
   border-radius: 50px;
@@ -99,6 +102,7 @@
   letter-spacing: 0.12em;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
 
 .filter-btn--active,
@@ -106,6 +110,31 @@
 .filter-btn:focus-visible {
   background-color: var(--color-primary);
   color: var(--color-text-light);
+}
+
+@media (max-width: 600px) {
+  .filter-bar-inner {
+    gap: 0.25rem;
+  }
+  .filter-btn {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.35rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 400px) {
+  .filter-bar-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .filter-btn {
+    width: 100%;
+    padding: 0.35rem 0;
+    font-size: 0.7rem;
+    white-space: normal;
+  }
 }
 
 /* ---------- Product Detail Layout ---------- */

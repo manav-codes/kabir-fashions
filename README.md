@@ -1,4 +1,4 @@
-# Kabir Fashions – Static Catalogue Website
+﻿# Kabir Fashions – Static Catalogue Website
 
 kabirfashions.in ---
 
@@ -11,7 +11,7 @@ Customers can browse products and contact the owner directly on WhatsApp. There 
 
 ```text
 kabir-fashions/
-├── index.html
+├── home.html
 ├── products.html
 ├── product-detail.html
 ├── about.html
@@ -31,7 +31,7 @@ kabir-fashions/
 
 ### HTML Pages
 
-- **index.html**  
+- **home.html**  
   Homepage with hero banner, quick brand strip, featured products and a WhatsApp call‑to‑action.
 
 - **products.html**  
@@ -109,7 +109,7 @@ To change this number globally, search in the HTML files for `wa.me/919327769799
 ## How to View the Site
 
 1. Copy the entire `kabir-fashions` folder to your machine.  
-2. Open `index.html` in any modern browser (Chrome, Edge, Firefox, etc.).  
+2. Open `home.html` in any modern browser (Chrome, Edge, Firefox, etc.).  
 3. Navigate via the top navbar links between **Home**, **Products**, **About** and **Contact**.
 
 No build step or server is required – it is a purely static website.
@@ -122,7 +122,7 @@ Because there is no database or admin panel, **all updates are done by editing H
 
 ### 1. Update Featured Products on the Homepage
 
-1. Open `index.html` in a code editor.  
+1. Open `home.html` in a code editor.  
 2. Search for the comment “Featured Products” or for `<section class="section featured-products">`.  
 3. Inside this section you will see several `article` elements with the class `product-card`.
 4. For each card you can change:

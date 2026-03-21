@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,12 +14,12 @@
     rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
   <!-- Global and component styles -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/products.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/products.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
 </head>
 
 <body>
@@ -29,18 +29,18 @@
   <header class="site-header">
     <nav class="navbar">
       <div class="navbar-inner container">
-        <a href="index.html" class="navbar-logo">
-          <img src="images/logo.png" alt="Kabir Fashions" />
+        <a href="../home/" class="navbar-logo">
+          <img src="../images/logo.png" alt="Kabir Fashions" />
         </a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
         <label for="nav-toggle" class="nav-toggle-label">
           <span></span>
         </label>
         <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="products.html">Products</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="../home/">Home</a>
+          <a href="../products/">Products</a>
+          <a href="../about/">About</a>
+          <a href="../contact/">Contact</a>
         </div>
       </div>
     </nav>
@@ -53,7 +53,7 @@
     <!-- ===== Back Home Button ===== -->
     <section class="page-header">
       <div class="container">
-        <a href="index.html" class="btn btn-back-home">← Back to Home</a>
+        <a href="../home/" class="btn btn-back-home">← Back to Home</a>
       </div>
     </section>
 
@@ -86,7 +86,7 @@
               </div>
 
               <a href="https://wa.me/919327769799" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                <img src="images/whatsapp-icon.png" alt="" class="whatsapp-icon"> Chat on WhatsApp
+                <img src="../images/whatsapp.svg" alt="" class="whatsapp-icon"> Chat on WhatsApp
               </a>
             </div>
 
@@ -170,10 +170,10 @@
         <div>
           <div class="footer-heading">Quick Links</div>
           <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="../home/">Home</a>
+            <a href="../products/">Products</a>
+            <a href="../about/">About</a>
+            <a href="../contact/">Contact</a>
           </div>
         </div>
         <div>
@@ -189,13 +189,26 @@
               </a></p>
           </div>
         </div>
+
+        <!-- Footer column: map location -->
+        <div>
+          <div class="footer-heading">Location</div>
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      © 2026 Kabir Fashions. All rights reserved.
+      <div class="container footer-bottom-inner">
+        <div>© 2026 Kabir Fashions. All rights reserved.</div>
+        <div class="developer-credit">
+          Developed by: <a href="mailto:sukhwanimanav24@gmail.com">Manav Sukhwani</a>
+        </div>
+      </div>
     </div>
   </footer>
-  <script src="js/scroll-reveal.js"></script>
+  <script src="../js/scroll-reveal.js"></script>
 </body>
 
 </html>
