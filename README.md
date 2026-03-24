@@ -96,7 +96,7 @@ kabir-fashions/
 ## Design
 
 ### Colour Palette
-* **Primary:** `#a47764` (warm terracotta)
+* **Primary:** `#b16f55` (warm terracotta)
 * **Secondary:** `#f0ebd8` (warm off-white)
 * **Text Dark:** `#2C1A12`
 * **Text Mid:** `#6B4F3A`
