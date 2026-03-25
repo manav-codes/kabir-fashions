@@ -3,11 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
   var filterButtons = document.querySelectorAll(".filter-btn");
   var productCards = document.querySelectorAll(".product-card");
 
+  function normalizeText(text) {
+    return text
+      .toLowerCase()
+      .replace(/[\u2010\u2011\u2012\u2013\u2014\u2212]/g, "-")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
   var categoryMap = {
-    "All": null,
-    "Kurtas": "Kurtas",
-    "Co-ord Sets": "2 Piece Set",
-    "3 Piece Sets": "3 Piece Set"
+    "all": null,
+    "kurtas": "kurtas",
+    "co-ord sets": "co-ord set",
+    "3 piece sets": "3 piece set"
   };
 
   filterButtons.forEach(function (btn) {
@@ -17,15 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       btn.classList.add("filter-btn--active");
 
-      var filterKey = btn.textContent.trim();
+      var filterKey = normalizeText(btn.textContent);
       var matchText = categoryMap[filterKey];
 
+      if (typeof matchText === "undefined") {
+        matchText = filterKey;
+      }
+
       productCards.forEach(function (card) {
-        if (!matchText) {
+        if (matchText === null) {
           card.style.display = "";
         } else {
           var category = card.querySelector(".product-card__category");
-          if (category && category.textContent.includes(matchText)) {
+          var normalizedCategory = category ? normalizeText(category.textContent) : "";
+          if (normalizedCategory.includes(matchText)) {
             card.style.display = "";
           } else {
             card.style.display = "none";
