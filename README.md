@@ -16,9 +16,8 @@ Built as a freelance project using only HTML, CSS, and a small amount of JavaScr
 ---
 
 ## Screenshots
-> *Add screenshots here once the site has real product images.*
+<img width="1920" height="2063" alt="capture" src="https://github.com/user-attachments/assets/41175cc2-3968-45d8-a314-7f55aca5af57" />
 
----
 
 ## What
 A static clothing catalogue website with:
@@ -198,11 +197,10 @@ The site is hosted on **GitHub Pages** and deploys automatically on every push t
 * No swipe support on mobile for product image gallery
 
 ### To-Do / Future Features:
-- [ ] Add real product images when provided by client
+- [✅] Add real product images when provided by client
 - [ ] Add swipe gesture support for mobile image gallery
 - [ ] Add smooth animation when filtering products
-- [ ] Add Instagram feed or social links section
-- [ ] Add a floating WhatsApp button on all pages
+- [✅] Add a floating WhatsApp button on all pages
 
 ---
 
