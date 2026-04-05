@@ -30,7 +30,7 @@
   margin-bottom: 1rem;
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 
 .product-card__image img {

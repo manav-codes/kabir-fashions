@@ -15,6 +15,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kabir Fashions | Premium Indian Clothing Catalogue</title>
+  <meta property="og:site_name" content="Kabir Fashions">
+  <script type="application/ld+json">{"@context": "https://schema.org","@type": "WebSite","name": "Kabir Fashions","url": "https://kabirfashions.in"}</script>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,7 +56,7 @@
         <!-- Primary navigation links -->
         <div class="nav-links">
           <a href="./">Home</a>
-          <a href="./home/products/">Products</a>
+          <a href="#products">Products</a>
           <a href="./about/">About</a>
           <a href="./contact/">Contact</a>
         </div>
@@ -75,7 +77,7 @@
           <p class="hero-subheading">
             Premium clothing made for everyday elegance.
           </p>
-          <a href="./home/products/" class="btn hero-cta">View Collection</a>
+          <a href="#products" class="btn hero-cta">View Collection</a>
         </div>
       </div>
     </section>
@@ -114,7 +116,7 @@
               </div>
               <p class="product-card__category">Kurtas</p>
               <h2 class="product-card__name">Nachos</h2>
-              <a href="./product-detail/" class="product-card__link">
+              <a href="./product-detail/nachos/" class="product-card__link">
                 View Details
               </a>
             </article>
@@ -126,7 +128,7 @@
   </div>
               <p class="product-card__category">Co-ord Set</p>
               <h2 class="product-card__name">Princy</h2>
-              <a href="./product-detail/" class="product-card__link">
+              <a href="./product-detail/princy/" class="product-card__link">
                 View Details
               </a>
             </article>
@@ -138,7 +140,7 @@
               </div>
               <p class="product-card__category">3 Piece Set</p>
               <h2 class="product-card__name">सयानी</h2>
-              <a href="./product-detail/" class="product-card__link">
+              <a href="./product-detail/sayani/" class="product-card__link">
                 View Details
               </a>
             </article>
@@ -184,7 +186,7 @@
           <div class="footer-heading">Quick Links</div>
           <div class="footer-links">
             <a href="./">Home</a>
-            <a href="./home/products/">Products</a>
+            <a href="#products">Products</a>
             <a href="./about/">About</a>
             <a href="./contact/">Contact</a>
           </div>
@@ -226,6 +228,63 @@
   </footer>
   <script src="./js/filter.js"></script>
   <script src="./js/scroll-reveal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navToggle = document.getElementById('nav-toggle');
+      var productsSection = document.getElementById('products');
+      var isScrollingByTap = false;
+      var scrollUnlockTimer = null;
+
+      // Helper: close mobile menu
+      function closeMenu() {
+        if (navToggle) { navToggle.checked = false; }
+      }
+
+      // Helper: smooth scroll with fallback
+      function smoothScroll(top) {
+        try { window.scrollTo({ top: top, behavior: 'smooth' }); }
+        catch (e) { window.scrollTo(0, top); }
+      }
+
+      function beginTapScroll() {
+        isScrollingByTap = true;
+        if (scrollUnlockTimer) { clearTimeout(scrollUnlockTimer); }
+        scrollUnlockTimer = setTimeout(function() {
+          isScrollingByTap = false;
+        }, 500);
+      }
+
+      // --- Scroll to top: Home link & logo ---
+      var homeLink = document.querySelector('.nav-links a[href="./"]');
+      var logoLink = document.querySelector('.navbar-logo');
+
+      function scrollToTop(e) {
+        e.preventDefault();
+        if (isScrollingByTap) { return; }
+        beginTapScroll();
+        closeMenu();
+        smoothScroll(0);
+      }
+
+      if (homeLink) { homeLink.addEventListener('click', scrollToTop); }
+      if (logoLink) { logoLink.addEventListener('click', scrollToTop); }
+
+      // --- Scroll to products: intercept #products links (clean URL, no hash) ---
+      var productLinks = document.querySelectorAll('a[href="#products"]');
+      productLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (isScrollingByTap) { return; }
+          beginTapScroll();
+          closeMenu();
+          if (productsSection) {
+            var top = productsSection.getBoundingClientRect().top + window.pageYOffset - 70;
+            smoothScroll(top);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

@@ -63,20 +63,20 @@
     grid-template-columns: 1fr;
   }
 
-  /* ---------- Product Grid: 10 rows × 2 columns ---------- */
+  /* ---------- Product Grid: 2 columns on mobile ---------- */
   .product-grid.grid-3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   /* Product cards for mobile */
   .product-grid.grid-3 .product-card {
-    padding: 0.8rem;
+    padding: 0.5rem;
   }
 
   .product-grid.grid-3 .product-card__image {
     aspect-ratio: 3 / 4;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.5rem;
   }
 
   .product-grid.grid-3 .product-card__category {
@@ -85,24 +85,19 @@
   }
 
   .product-grid.grid-3 .product-card__name {
-    font-size: 0.94rem;
+    font-size: 0.9rem;
     line-height: 1.3;
     margin-bottom: 0.25rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
   }
 
   .product-grid.grid-3 .product-card__link {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
-  /* Wider content card on mobile */
+  /* Wider content card on mobile — less padding = more space for images */
   .content-card {
-    width: calc(100% - 0.75rem);
-    padding: 1rem;
+    width: calc(100% - 0.5rem);
+    padding: 0.75rem;
   }
 }
 
