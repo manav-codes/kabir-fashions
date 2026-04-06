@@ -1,4 +1,4 @@
-﻿# Kabir Fashions — Clothing Catalogue Website
+﻿# Kabir Fashions — Clothing Catalogue Website - Secured
 
 **Live site:** [kabirfashions.in](https://kabirfashions.in)
 
