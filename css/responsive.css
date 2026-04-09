@@ -124,3 +124,77 @@
     padding: 2.5rem 0;
   }
 }
+
+/* ---------- Product Detail Page — Mobile ---------- */
+@media (max-width: 768px) {
+  /* Cap the main product image so info is visible without scrolling */
+  .product-gallery__main {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .product-image-panel img {
+    max-height: 60vh;
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* Smaller product title on mobile */
+  .product-detail-info__name {
+    font-size: 1.5rem;
+  }
+
+  /* Tighter product detail grid */
+  .product-detail-inner {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  /* Hero card — less padding on mobile */
+  .hero-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  /* Product card images — squarer ratio for better grid density */
+  .product-card__image {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* ---------- Very Small Phones (≤400px) ---------- */
+@media (max-width: 400px) {
+  /* Even tighter content card */
+  .content-card {
+    width: calc(100% - 0.25rem);
+    padding: 0.5rem;
+  }
+
+  /* Smaller hero heading */
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+
+  .hero-subheading {
+    font-size: 0.9rem;
+  }
+
+  /* Product image — tighter cap */
+  .product-image-panel img {
+    max-height: 50vh;
+  }
+
+  /* Thumbnail grid tighter gap */
+  .product-gallery__thumbnails--full {
+    gap: 0.5rem;
+  }
+
+  /* Product detail info */
+  .product-detail-info__name {
+    font-size: 1.3rem;
+  }
+
+  .product-detail-info__description {
+    font-size: 0.88rem;
+  }
+}

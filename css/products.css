@@ -126,6 +126,7 @@
   .filter-bar-inner {
     gap: 0.25rem;
   }
+
   .filter-btn {
     font-size: 0.65rem;
     padding: 0.25rem 0.35rem;
@@ -139,6 +140,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
   }
+
   .filter-btn {
     width: 100%;
     padding: 0.35rem 0;
@@ -150,6 +152,10 @@
 /* ---------- Product Detail Layout ---------- */
 .product-detail {
   background-color: var(--color-secondary);
+}
+
+.product-detail .content-card {
+  margin-top: 0;
 }
 
 .product-detail-inner {
@@ -170,6 +176,103 @@
   border-radius: 8px;
   background-color: var(--color-white);
   padding: 0.75rem;
+  position: relative;
+}
+
+/* ---------- Carousel ---------- */
+.carousel-track {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-slide.active {
+  display: block;
+  animation: carouselFadeIn 0.3s ease;
+}
+
+@keyframes carouselFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  color: var(--color-text-dark);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-arrow--prev {
+  left: 0.5rem;
+}
+
+.carousel-arrow--next {
+  right: 0.5rem;
+}
+
+/* Counter */
+.carousel-counter {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 400px) {
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Back/undo button above the product image */
+.btn-back-overlay {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-back-overlay:hover {
+  transform: scale(1.05);
 }
 
 .product-gallery__thumbnails {
@@ -178,14 +281,65 @@
   gap: 0.75rem;
 }
 
+/* Full-width variant below product info — more columns on larger screens */
+.product-gallery__thumbnails--full {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 0.5rem;
+}
+
+.product-colours-heading {
+  margin-top: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text-dark);
+}
+
+/* When a colours heading follows a size selector, tighten the gap */
+.size-selector+.product-colours-heading {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .product-gallery__thumbnails--full {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .product-gallery__thumbnails--full {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .product-gallery__thumbnail {
   border: 1px solid var(--color-border);
   cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.product-gallery__thumbnail img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.product-gallery__thumbnail:hover {
+  border-color: var(--color-primary);
+  transform: scale(1.03);
 }
 
 /* CSS-only gallery using :target */
 .product-image-panel {
   display: none;
+}
+
+.product-image-panel img {
+  transition: opacity 0.15s ease;
+  width: 100%;
+  display: block;
 }
 
 .product-image-panel:target {
@@ -227,11 +381,14 @@
 /* Size selector */
 .size-selector {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .size-option {
+  flex: 0 1 auto;
   min-width: 42px;
   padding: 0.45rem 0.85rem;
   border: 1px solid var(--color-primary);
@@ -247,6 +404,30 @@
 .size-option:focus-visible {
   background-color: var(--color-primary);
   color: var(--color-text-light);
+}
+
+@media (max-width: 600px) {
+  .size-selector {
+    gap: 0.5rem;
+  }
+
+  .size-option {
+    min-width: 38px;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .size-selector {
+    gap: 0.4rem;
+  }
+
+  .size-option {
+    min-width: 36px;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.7rem;
+  }
 }
 
 .product-detail-info__note {

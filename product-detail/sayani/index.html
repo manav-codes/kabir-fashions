@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8DBNHSVR9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8DBNHSVR9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-D8DBNHSVR9');
-</script>
+    gtag('config', 'G-D8DBNHSVR9');
+  </script>
   <!-- Meta information for Kabir Fashions product detail page -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,15 +68,28 @@
           <div class="product-detail-inner">
             <!-- Product image gallery -->
             <div class="product-gallery">
+              <a href="../../home/" id="btn-back" class="btn btn-back-home btn-back-overlay">← Back to Home</a>
               <div class="product-gallery__main">
-                <div id="img1" class="product-image-panel">
-                  <img src="../../images/products/3/sayani.jpg" alt="Sayani 3 Piece Set" />
+                <!-- Carousel navigation arrows -->
+                <button class="carousel-arrow carousel-arrow--prev" id="carousel-prev" aria-label="Previous image">‹</button>
+                <button class="carousel-arrow carousel-arrow--next" id="carousel-next" aria-label="Next image">›</button>
+
+                <!-- Carousel images -->
+                <div class="carousel-track" id="carousel-track">
+                  <img src="../../images/products/3/sayani.webp" alt="Sayani 3 Piece Set" class="carousel-slide active" />
+                  <img src="../../images/products/3/2.webp" alt="Sayani Variant 2" class="carousel-slide" />
+                  <img src="../../images/products/3/3.webp" alt="Sayani Variant 3" class="carousel-slide" />
+                  <img src="../../images/products/3/4.webp" alt="Sayani Variant 4" class="carousel-slide" />
+                  <img src="../../images/products/3/5.webp" alt="Sayani Variant 5" class="carousel-slide" />
+                  <img src="../../images/products/3/6.webp" alt="Sayani Variant 6" class="carousel-slide" />
+                  <img src="../../images/products/3/7.webp" alt="Sayani Variant 7" class="carousel-slide" />
+                  <img src="../../images/products/3/8.webp" alt="Sayani Variant 8" class="carousel-slide" />
+                  <img src="../../images/products/3/9.webp" alt="Sayani Variant 9" class="carousel-slide" />
+                  <img src="../../images/products/3/10.webp" alt="Sayani Variant 10" class="carousel-slide" />
                 </div>
-              </div>
-              <div class="product-gallery__thumbnails">
-                <a href="#img1" class="product-gallery__thumbnail">
-                  <img src="../../images/products/3/sayani.webp" alt="Sayani 3 Piece Set thumbnail" />
-                </a>
+
+                <!-- Image counter -->
+                <div class="carousel-counter" id="carousel-counter">1 / 10</div>
               </div>
             </div>
 
@@ -88,31 +101,75 @@
               <div class="divider"></div>
 
               <p class="product-detail-info__description">
-                The Sayani 3 Piece Set is a beautifully coordinated ensemble crafted for the modern Indian woman.
-                Featuring a kurta, bottom, and dupatta in harmonious tones, it blends traditional elegance with
-                everyday comfort. Designed by Kabir Fashions with premium fabric and refined finishing, the Sayani
-                set is perfect for festive gatherings, family occasions, or any moment that calls for graceful style.
+                Premium and soft quality Dhaabu Cotton fabric paired with pure Mul Cotton Duppatta
               </p>
-
+              <br>
               <!-- Size selector (visual only) -->
+              <p class="product-detail-info__description">Available:</p>
               <div class="size-selector">
-                <button class="size-option" type="button">S</button>
                 <button class="size-option" type="button">M</button>
                 <button class="size-option" type="button">L</button>
                 <button class="size-option" type="button">XL</button>
+                <button class="size-option" type="button">2XL</button>
+                <button class="size-option" type="button">3XL</button>
+                <button class="size-option" type="button">4XL</button>
+                <button class="size-option" type="button">5XL</button>
               </div>
-
+              <br>
+              <!-- On demand (visual only) -->
+              <p class="product-detail-info__description">Made on request:</p>
+              <div class="size-selector">
+                <button class="size-option" type="button">6XL</button>
+                <button class="size-option" type="button">7XL</button>
+                <button class="size-option" type="button">8XL</button>
+              </div>
+              <br>
               <!-- WhatsApp enquiry button -->
               <div class="mt-4">
-                <a href="https://wa.me/919327769799?text=Hi%2C+I+am+interested+in+the+Sayani+3+Piece+Set" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919327769799?text=Hi%2C+I+am+interested+in+the+Sayani+3+Piece+Set"
+                  class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                   <img src="../../images/whatsapp.svg" alt="" class="whatsapp-icon"> Contact on WhatsApp
                 </a>
                 <p class="product-detail-info__note">
-                  We'll respond within 2 hours with availability and sizing
+                  We'll respond within few hours with availability and sizing
                   details.
                 </p>
               </div>
             </div>
+          </div>
+
+          <!-- Colour variant thumbnails (full width below product info) -->
+          <div class="product-colours-heading">
+            <p>Colours:</p>
+          </div>
+          <div class="product-gallery__thumbnails product-gallery__thumbnails--full">
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/2.webp" alt="Sayani 3 Piece Variant 2" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/3.webp" alt="Sayani 3 Piece Variant 3" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/4.webp" alt="Sayani 3 Piece Variant 4" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/5.webp" alt="Sayani 3 Piece Variant 5" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/6.webp" alt="Sayani 3 Piece Variant 6" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/7.webp" alt="Sayani 3 Piece Variant 7" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/8.webp" alt="Sayani 3 Piece Variant 8" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/9.webp" alt="Sayani 3 Piece Variant 9" />
+            </a>
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/3/10.webp" alt="Sayani 3 Piece Variant 10" />
+            </a>
           </div>
         </div>
       </div>
@@ -216,7 +273,10 @@
         <div>
           <div class="footer-heading">Location</div>
           <div class="footer-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin"
+              width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -231,6 +291,103 @@
     </div>
   </footer>
   <script src="../../js/scroll-reveal.js"></script>
+  <script>
+    (function () {
+      // --- Carousel ---
+      const slides = document.querySelectorAll('.carousel-slide');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      const counter = document.getElementById('carousel-counter');
+      const backBtn = document.getElementById('btn-back');
+      const track = document.getElementById('carousel-track');
+      if (!slides.length) return;
+
+      let current = 0;
+      const total = slides.length;
+
+      function showSlide(index) {
+        slides.forEach(function (s) { s.classList.remove('active'); });
+        current = (index + total) % total;
+        slides[current].classList.add('active');
+        if (counter) counter.textContent = (current + 1) + ' / ' + total;
+
+        // Update back button
+        if (backBtn) {
+          if (current === 0) {
+            backBtn.textContent = '\u2190 Back to Home';
+          } else {
+            backBtn.textContent = '\u2190';
+          }
+        }
+      }
+
+      // Initialize first slide
+      showSlide(0);
+
+      // Arrow buttons
+      if (prevBtn) prevBtn.addEventListener('click', function () { showSlide(current - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { showSlide(current + 1); });
+
+      // Touch swipe support
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      if (track) {
+        track.addEventListener('touchstart', function (e) {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        track.addEventListener('touchend', function (e) {
+          touchEndX = e.changedTouches[0].screenX;
+          var diff = touchStartX - touchEndX;
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) {
+              showSlide(current + 1); // swipe left = next
+            } else {
+              showSlide(current - 1); // swipe right = prev
+            }
+          }
+        }, { passive: true });
+      }
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') showSlide(current - 1);
+        if (e.key === 'ArrowRight') showSlide(current + 1);
+      });
+
+      // Thumbnail click — jump to matching slide
+      document.querySelectorAll('.product-gallery__thumbnail').forEach(function (thumb) {
+        var thumbImg = thumb.querySelector('img');
+        if (!thumbImg) return;
+
+        thumb.addEventListener('click', function (e) {
+          e.preventDefault();
+          // Find matching slide by filename
+          var thumbFile = thumbImg.src.split('/').pop();
+          for (var i = 0; i < slides.length; i++) {
+            if (slides[i].src.split('/').pop() === thumbFile) {
+              showSlide(i);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              break;
+            }
+          }
+        });
+      });
+
+      // Back button: go to first slide or navigate home
+      if (backBtn) {
+        backBtn.addEventListener('click', function (e) {
+          if (current !== 0) {
+            e.preventDefault();
+            showSlide(0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+          // If already on first slide, default link goes to home
+        });
+      }
+    })();
+  </script>
 </body>
 
 </html>
