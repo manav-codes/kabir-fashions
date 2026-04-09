@@ -1,6 +1,6 @@
 ﻿# Kabir Fashions — Clothing Catalogue Website
 
-**Live site:** [kabirfashions.in](https://kabirfashions.in)
+**Live site:** [www.kabirfashions.in](https://www.kabirfashions.in)
 
 *A clean, professional clothing catalogue website built for a real client — browsable on any device, with direct WhatsApp ordering.*
 
@@ -39,7 +39,8 @@ Built with vanilla HTML, CSS, and JavaScript. No build tools, no package manager
 * CSS `:target` trick for product image gallery
 * Vanilla JS for category filtering (no jQuery or libraries)
 * Formspree for contact form email delivery (no backend)
-* GitHub Pages for free, reliable hosting
+* Vercel routing config via `vercel.json` (`cleanUrls` + `trailingSlash`)
+* SEO metadata on homepage (`title`, canonical, Open Graph, JSON-LD)
 * Custom domain via Spaceship registrar
 
 ---
@@ -50,9 +51,12 @@ Built with vanilla HTML, CSS, and JavaScript. No build tools, no package manager
 * 3 Piece Sets (Top, Bottom & Dupatta)
 
 ## Pages
-* `/` — Homepage with hero banner and full product catalogue
-* `/products/` — Full catalogue with live category filtering
-* `/product-detail/` — Single product with image gallery and size selector
+* `/` — Root homepage with hero banner and product catalogue
+* `/home/` — Main homepage route with the same catalogue
+* `/home/products/` — Redirect helper that opens `/home/` and scrolls to products
+* `/product-detail/nachos/` — Nachos product detail page
+* `/product-detail/princy/` — Princy product detail page
+* `/product-detail/sayani/` — Sayani product detail page
 * `/about/` — Brand story and values
 * `/contact/` — Contact details, Google Maps link and enquiry form
 
@@ -61,17 +65,27 @@ Built with vanilla HTML, CSS, and JavaScript. No build tools, no package manager
 ## File Structure
 ```text
 kabir-fashions/
-├── index.html              — Root homepage (serves content directly)
+├── index.html              — Root homepage
+├── CNAME                   — Custom domain mapping
+├── sitemap.xml             — Search engine sitemap
+├── vercel.json             — Vercel routing config
 ├── home/
-│   └── index.html          — Homepage with hero banner and full product catalogue
-├── products/
-│   └── index.html          — Full catalogue with live category filtering
+│   ├── index.html          — Homepage with hero banner and product catalogue
+│   └── products/
+│       └── index.html      — Redirect helper to /home/ products section
+├── products/               — Reserved folder (currently empty)
 ├── product-detail/
-│   └── index.html          — Single product with image gallery and size selector
+│   ├── index.html          — Generic detail template page
+│   ├── nachos/
+│   │   └── index.html
+│   ├── princy/
+│   │   └── index.html
+│   └── sayani/
+│       └── index.html
 ├── about/
 │   └── index.html          — Brand story and values
 ├── contact/
-│   └── index.html          — Contact details, Google Maps link and enquiry form
+│   └── index.html          — Contact details, map link and enquiry form
 ├── css/
 │   ├── style.css           — global styles, variables, layout
 │   ├── navbar.css          — sticky navbar and mobile hamburger
@@ -85,8 +99,8 @@ kabir-fashions/
 ├── images/
 │   ├── logo.png
 │   ├── whatsapp.svg
-│   ├── products/           — product images go here
-│   └── hero/               — hero banner images go here
+│   ├── products/           — product images and variants
+│   └── hero/               — hero banner images
 └── README.md
 ```
 
@@ -130,7 +144,7 @@ cd kabir-fashions
 
 ## How to Update Products
 
-1. Open `index.html` (root) or `products/index.html` in any code editor.
+1. Open `index.html` (root) or `home/index.html` in any code editor.
 2. Find the product card you want to edit — each is an `article.product-card` block.
 3. Update the name, category or image as needed.
    * **To add a product** — duplicate an entire `article.product-card` block and edit it.
@@ -157,21 +171,17 @@ cd kabir-fashions
 ---
 
 ## Deployment
-The site is hosted on **GitHub Pages** and deploys automatically on every push to the `master` branch.
+The project includes **Vercel** configuration in `vercel.json` and uses a custom domain managed via Spaceship DNS.
 
-**To deploy your own version:**
-1. Fork this repository
-2. Go to Settings → Pages
-3. Set branch to `master`
-4. Your site will be live at `https://yourusername.github.io/kabir-fashions`
+**Typical deployment flow:**
+1. Import the repository into Vercel
+2. Set the production domain in Vercel project settings
+3. Point domain DNS records from Spaceship to Vercel
+4. Redeploy after each push
 
-**To connect a custom domain**, add your domain in Settings → Pages → Custom Domain, then add the following A records in your domain registrar's DNS settings:
-```text
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-```
+**SEO note:**
+- Sitemap URLs use `https://www.kabirfashions.in/`
+- Homepage metadata includes canonical, Open Graph, and JSON-LD schema
 
 ---
 
@@ -216,7 +226,7 @@ The site is hosted on **GitHub Pages** and deploys automatically on every push t
 VIP Market, Opp Safal 1, Raipur, 
 Ahmedabad, Gujarat — 380001](https://maps.app.goo.gl/Jzz3LBLCxeBLvmLN8)
 * 📩 [kabirfashions.kmt@gmail.com](mailto:kabirfashions.kmt@gmail.com)
-* 🌐 [kabirfashions.in](https://kabirfashions.in)
+* 🌐 [www.kabirfashions.in](https://www.kabirfashions.in)
 
 ## License
 This project was built for a private client. Code is publicly visible for portfolio purposes. Do not reuse or redistribute without permission.
