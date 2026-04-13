@@ -68,7 +68,7 @@
           <div class="product-detail-inner">
             <!-- Product image gallery -->
             <div class="product-gallery">
-              <div class="product-gallery__main">
+              <div class="product-gallery__main" style="cursor:zoom-in;">
                 <div id="img1" class="product-image-panel">
                   <img src="../../images/products/1/temp.png" alt="Nachos Kurta" />
                 </div>
@@ -132,49 +132,22 @@
             Explore more styles from Kabir Fashions.
           </p>
 
-          <div class="product-grid grid grid-4">
+          <div class="product-grid grid grid-2">
             <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
+              <div class="product-card__image">
+                <img src="../../images/products/2/princy.jpg" alt="Princy Co-ord Set" />
               </div>
-              <p class="product-card__category">Kurtas</p>
-              <h3 class="product-card__name">Textured Formal Kurta</h3>
-              <a href="../../product-detail/" class="product-card__link">
-                View Details
-              </a>
+              <p class="product-card__category">Co-ord Set</p>
+              <h3 class="product-card__name">Princy</h3>
+              <a href="../../product-detail/princy/" class="product-card__link">View Details</a>
             </article>
-
             <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">Kurtas</p>
-              <h3 class="product-card__name">Embroidered Festive Kurta</h3>
-              <a href="../../product-detail/" class="product-card__link">
-                View Details
-              </a>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
-              </div>
-              <p class="product-card__category">2 Piece Set – Top & Bottom</p>
-              <h3 class="product-card__name">Cotton Co-ord Set</h3>
-              <a href="../../product-detail/" class="product-card__link">
-                View Details
-              </a>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__image image-placeholder image-placeholder--square">
-                Product Image
+              <div class="product-card__image">
+                <img src="../../images/products/3/sayani.webp" alt="Sayani 3 Piece Set" />
               </div>
               <p class="product-card__category">3 Piece Set</p>
-              <h3 class="product-card__name">Classic 3 Piece Set</h3>
-              <a href="../../product-detail/" class="product-card__link">
-                View Details
-              </a>
+              <h3 class="product-card__name">सयानी</h3>
+              <a href="../../product-detail/sayani/" class="product-card__link">View Details</a>
             </article>
           </div>
         </div>
@@ -235,7 +208,48 @@
       </div>
     </div>
   </footer>
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">✕</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+  </div>
+
   <script src="../../js/scroll-reveal.js"></script>
+  <script>
+    (function () {
+      var mainPanel = document.querySelector('.product-gallery__main');
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      var lightboxClose = document.getElementById('lightbox-close');
+
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt;
+        lightbox.classList.add('lightbox--open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('lightbox--open');
+        document.body.style.overflow = '';
+      }
+
+      if (mainPanel) {
+        mainPanel.addEventListener('click', function () {
+          var img = mainPanel.querySelector('.product-image-panel:not([style*="display: none"]) img, .product-image-panel img');
+          if (img) openLightbox(img.src, img.alt);
+        });
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightbox) lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
 </body>
 
 </html>
