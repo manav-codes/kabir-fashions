@@ -2,29 +2,21 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8DBNHSVR9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D8DBNHSVR9');
-</script>
-  <!-- Meta information for Kabir Fashions product detail page -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8DBNHSVR9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-D8DBNHSVR9');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nachos Kurta | Kabir Fashions</title>
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
-  <!-- URL Tab logo/Icon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
-  <!-- Global and component styles -->
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="../../css/navbar.css" />
   <link rel="stylesheet" href="../../css/footer.css" />
@@ -34,9 +26,6 @@
 </head>
 
 <body>
-  <!-- =========================
-         Global Site Header & Navbar
-         ========================= -->
   <header class="site-header">
     <nav class="navbar">
       <div class="navbar-inner container">
@@ -44,9 +33,7 @@
           <img src="../../images/logo.png" alt="Kabir Fashions" />
         </a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
         <div class="nav-links">
           <a href="../../home/">Home</a>
           <a href="../../home/products/">Products</a>
@@ -57,85 +44,71 @@
     </nav>
   </header>
 
-  <!-- =========================
-         Main Content
-         ========================= -->
   <main>
-    <!-- ===== Product Detail Layout ===== -->
     <section class="product-detail">
       <div class="container">
         <div class="content-card">
           <div class="product-detail-inner">
-            <!-- Product image gallery -->
             <div class="product-gallery">
-              <div class="product-gallery__main" style="cursor:zoom-in;">
-                <div id="img1" class="product-image-panel">
-                  <img src="../../images/products/1/temp.png" alt="Nachos Kurta" />
+              <a href="../../home/" id="btn-back" class="btn btn-back-home btn-back-overlay">← Back to Home</a>
+              <div class="product-gallery__main">
+                <button class="carousel-arrow carousel-arrow--prev" id="carousel-prev" aria-label="Previous image">‹</button>
+                <button class="carousel-arrow carousel-arrow--next" id="carousel-next" aria-label="Next image">›</button>
+                <div class="carousel-track" id="carousel-track" style="cursor:zoom-in;">
+                  <img src="../../images/products/66/nachos.jpg" alt="Nachos Kurta" class="carousel-slide active" />
                 </div>
-              </div>
-              <div class="product-gallery__thumbnails">
-                <a href="#img1" class="product-gallery__thumbnail">
-                  <img src="../../images/products/1/temp.png" alt="Nachos Kurta thumbnail" />
-                </a>
+                <div class="carousel-counter" id="carousel-counter">1 / 1</div>
               </div>
             </div>
 
-            <!-- Product information and purchase enquiry details -->
             <div class="product-detail-info">
               <p class="product-detail-info__category">Kurtas</p>
               <h1 class="product-detail-info__name">Nachos</h1>
-
               <div class="divider"></div>
 
               <p class="product-detail-info__description">
-                The Nachos Kurta is a relaxed yet refined everyday kurta crafted
-                from soft, breathable fabric. Its clean straight-cut silhouette
-                and subtle tonal detailing make it effortlessly versatile — pair
-                it with churidar, trousers or jeans for any occasion.
+                Premium quality Salsa
               </p>
-              <p class="product-detail-info__description mt-3">
-                Designed by Kabir Fashions to bring together traditional Indian
-                craftsmanship and contemporary ease, the Nachos Kurta is a
-                wardrobe staple that dresses up or down with equal grace.
-              </p>
-
-              <!-- Size selector (visual only) -->
+              <br>
+              <p class="product-detail-info__description">Available:</p>
               <div class="size-selector">
-                <button class="size-option" type="button">S</button>
-                <button class="size-option" type="button">M</button>
-                <button class="size-option" type="button">L</button>
-                <button class="size-option" type="button">XL</button>
+                <button class="size-option" type="button">Salsa</button>
+                <button class="size-option" type="button">No salsa</button>
               </div>
 
-              <!-- WhatsApp enquiry button -->
               <div class="mt-4">
-                <a href="https://wa.me/919327769799?text=Hi%2C+I+am+interested+in+the+Nachos+Kurta" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/919327769799?text=Hi%2C+I+am+interested+in+the+Nachos+Kurta"
+                  class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                   <img src="../../images/whatsapp.svg" alt="" class="whatsapp-icon"> Contact on WhatsApp
                 </a>
                 <p class="product-detail-info__note">
-                  We'll respond within 2 hours with availability and sizing
-                  details.
+                  We'll respond within few hours with availability and sizing details.
                 </p>
               </div>
             </div>
+          </div>
+
+          <div class="product-colours-heading">
+            <p>Colours:</p>
+          </div>
+          <div class="product-gallery__thumbnails product-gallery__thumbnails--full">
+            <a href="#img1" class="product-gallery__thumbnail">
+              <img src="../../images/products/66/nachos.jpg" alt="Nachos Kurta" />
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Related Products ===== -->
     <section class="section related-products">
       <div class="container">
         <div class="content-card">
           <h2 class="section-heading reveal">You May Also Like</h2>
-          <p class="section-subheading">
-            Explore more styles from Kabir Fashions.
-          </p>
-
+          <p class="section-subheading">Explore more styles from Kabir Fashions.</p>
           <div class="product-grid grid grid-2">
             <article class="product-card">
               <div class="product-card__image">
-                <img src="../../images/products/2/princy.jpg" alt="Princy Co-ord Set" />
+                <img src="../../images/products/2/1.webp" alt="Princy Co-ord Set" />
               </div>
               <p class="product-card__category">Co-ord Set</p>
               <h3 class="product-card__name">Princy</h3>
@@ -155,17 +128,12 @@
     </section>
   </main>
 
-  <!-- =========================
-         Global Footer
-         ========================= -->
   <footer class="site-footer">
     <div class="footer-main">
       <div class="container footer-grid">
         <div>
           <div class="footer-logo">Kabir Fashions</div>
-          <p class="footer-description">
-            Premium Indian clothing at affordable rates
-          </p>
+          <p class="footer-description">Premium Indian clothing at affordable rates</p>
         </div>
         <div>
           <div class="footer-heading">Quick Links</div>
@@ -189,12 +157,13 @@
               </a></p>
           </div>
         </div>
-
-        <!-- Footer column: map location -->
         <div>
           <div class="footer-heading">Location</div>
           <div class="footer-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin"
+              width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -208,7 +177,7 @@
       </div>
     </div>
   </footer>
-  <!-- Lightbox overlay -->
+
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
     <button class="lightbox__close" id="lightbox-close" aria-label="Close">✕</button>
     <img class="lightbox__img" id="lightbox-img" src="" alt="" />
@@ -217,37 +186,95 @@
   <script src="../../js/scroll-reveal.js"></script>
   <script>
     (function () {
-      var mainPanel = document.querySelector('.product-gallery__main');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      const counter = document.getElementById('carousel-counter');
+      const backBtn = document.getElementById('btn-back');
+      const track = document.getElementById('carousel-track');
+      if (!slides.length) return;
+
+      let current = 0;
+      const total = slides.length;
+
+      function showSlide(index) {
+        slides.forEach(function (s) { s.classList.remove('active'); });
+        current = (index + total) % total;
+        slides[current].classList.add('active');
+        if (counter) counter.textContent = (current + 1) + ' / ' + total;
+        if (backBtn) {
+          backBtn.textContent = current === 0 ? '\u2190 Back to Home' : '\u2190';
+        }
+      }
+
+      showSlide(0);
+
+      if (prevBtn) prevBtn.addEventListener('click', function () { showSlide(current - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { showSlide(current + 1); });
+
+      let touchStartX = 0;
+      if (track) {
+        track.addEventListener('touchstart', function (e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        track.addEventListener('touchend', function (e) {
+          var diff = touchStartX - e.changedTouches[0].screenX;
+          if (Math.abs(diff) > 40) { showSlide(diff > 0 ? current + 1 : current - 1); }
+        }, { passive: true });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') showSlide(current - 1);
+        if (e.key === 'ArrowRight') showSlide(current + 1);
+      });
+
+      document.querySelectorAll('.product-gallery__thumbnail').forEach(function (thumb) {
+        var thumbImg = thumb.querySelector('img');
+        if (!thumbImg) return;
+        thumb.addEventListener('click', function (e) {
+          e.preventDefault();
+          var thumbFile = thumbImg.src.split('/').pop();
+          for (var i = 0; i < slides.length; i++) {
+            if (slides[i].src.split('/').pop() === thumbFile) {
+              showSlide(i);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              break;
+            }
+          }
+        });
+      });
+
+      if (backBtn) {
+        backBtn.addEventListener('click', function (e) {
+          if (current !== 0) {
+            e.preventDefault();
+            showSlide(0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        });
+      }
+
       var lightbox = document.getElementById('lightbox');
       var lightboxImg = document.getElementById('lightbox-img');
       var lightboxClose = document.getElementById('lightbox-close');
 
       function openLightbox(src, alt) {
-        lightboxImg.src = src;
-        lightboxImg.alt = alt;
+        lightboxImg.src = src; lightboxImg.alt = alt;
         lightbox.classList.add('lightbox--open');
         document.body.style.overflow = 'hidden';
       }
-
       function closeLightbox() {
         lightbox.classList.remove('lightbox--open');
         document.body.style.overflow = '';
       }
 
-      if (mainPanel) {
-        mainPanel.addEventListener('click', function () {
-          var img = mainPanel.querySelector('.product-image-panel:not([style*="display: none"]) img, .product-image-panel img');
-          if (img) openLightbox(img.src, img.alt);
+      if (track) {
+        track.addEventListener('click', function () {
+          var active = track.querySelector('.carousel-slide.active');
+          if (active) openLightbox(active.src, active.alt);
         });
       }
-
       if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-      if (lightbox) lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) closeLightbox();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeLightbox();
-      });
+      if (lightbox) lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
     })();
   </script>
 </body>
