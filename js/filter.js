@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var categoryMap = {
     "all": null,
-    "kurtas": "kurtas",
     "co-ord sets": "co-ord set",
     "3 piece sets": "3 piece set"
   };
