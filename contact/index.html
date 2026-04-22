@@ -14,6 +14,8 @@
   <!-- Meta information for Kabir Fashions contact page -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Kabir Fashions in Ahmedabad for product enquiries, sizing support, bulk orders, and WhatsApp assistance." />
+  <link rel="canonical" href="https://www.kabirfashions.in/contact/" />
   <title>Contact Us | Kabir Fashions</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -136,27 +138,39 @@
                 <p style="color: var(--color-text-mid); margin-top: 0.5rem;">Thank you for reaching out to Kabir
                   Fashions.</p>
               </div>
+              <p id="form-error" style="display: none; color: #b00020; margin-top: 1rem;">
+                Sorry, we could not send your enquiry. Please try again or contact us on WhatsApp.
+              </p>
             </div>
             <script>
               document.getElementById("contact-form").addEventListener("submit", function (e) {
                 e.preventDefault();
                 var form = this;
                 var submitBtn = form.querySelector("button[type='submit']");
+                var errorMessage = document.getElementById("form-error");
                 submitBtn.disabled = true;
                 submitBtn.textContent = "Sending...";
+                if (errorMessage) {
+                  errorMessage.style.display = "none";
+                }
                 var data = new FormData(form);
                 fetch("https://formspree.io/f/mnjooypr", {
                   method: "POST",
                   body: data,
                   headers: { "Accept": "application/json" }
                 }).then(function (response) {
+                  if (!response.ok) {
+                    throw new Error("Form submission failed");
+                  }
                   form.style.display = "none";
                   document.getElementById("form-success").style.display = "block";
                   form.reset();
                 }).catch(function () {
-                  form.style.display = "none";
-                  document.getElementById("form-success").style.display = "block";
-                  form.reset();
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = "Submit";
+                  if (errorMessage) {
+                    errorMessage.style.display = "block";
+                  }
                 });
               });
             </script>

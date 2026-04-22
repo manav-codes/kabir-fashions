@@ -1,34 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://www.kabirfashions.in/</loc>
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
-
+  <url>
+    <loc>https://www.kabirfashions.in/home/</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   <url>
     <loc>https://www.kabirfashions.in/about/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
-
   <url>
     <loc>https://www.kabirfashions.in/contact/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
-
+  <url>
+    <loc>https://www.kabirfashions.in/product-detail/natasha/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   <url>
     <loc>https://www.kabirfashions.in/product-detail/princy/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
+  <url>
+    <loc>https://www.kabirfashions.in/product-detail/sara/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.kabirfashions.in/product-detail/asmita/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.kabirfashions.in/product-detail/kyraah/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   <url>
     <loc>https://www.kabirfashions.in/product-detail/sayani/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
-
+  <url>
+    <loc>https://www.kabirfashions.in/product-detail/anjana/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.kabirfashions.in/product-detail/parinita/</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
