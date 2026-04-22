@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Page Not Found | Kabir Fashions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+  <style>
+    .error-main {
+      background-color: var(--color-primary);
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .error-card {
+      background-color: var(--color-secondary);
+      border-radius: 16px;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4rem 3.5rem;
+      text-align: center;
+    }
+
+    .error-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(5rem, 18vw, 9rem);
+      font-weight: 700;
+      color: var(--color-text-dark);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .error-ornament {
+      color: var(--color-primary);
+      font-size: 1.4rem;
+      letter-spacing: 0.6em;
+      margin: 0.75rem 0 1.5rem;
+      opacity: 0.7;
+    }
+
+    .error-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      color: var(--color-text-dark);
+      margin-bottom: 0.75rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .error-subtext {
+      font-size: 1rem;
+      color: var(--color-text-mid);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--color-text-dark);
+      border: 1.5px solid var(--color-border);
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus-visible {
+      background-color: var(--color-border);
+      transform: translateY(-1px);
+    }
+
+    .error-divider {
+      height: 1px;
+      background-color: var(--color-border);
+      margin: 0 0 2.5rem;
+    }
+
+    .error-links-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-text-mid);
+      margin-bottom: 1.25rem;
+    }
+
+    .error-product-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .error-product-link {
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      border-radius: 50px;
+      border: 1px solid var(--color-border);
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      color: var(--color-text-dark);
+      background-color: var(--color-white);
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      text-decoration: none !important;
+    }
+
+    .error-product-link:hover,
+    .error-product-link:focus-visible {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-text-light);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 600px) {
+      .error-card {
+        padding: 3rem 1.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-inner container">
+        <a href="/home/" class="navbar-logo">
+          <img src="/images/logo.png" alt="Kabir Fashions" />
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        <div class="nav-links">
+          <a href="/home/">Home</a>
+          <a href="/home/products/">Products</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="error-main">
+    <div class="error-card">
+      <p class="error-eyebrow">Kabir Fashions</p>
+      <div class="error-code">404</div>
+      <div class="error-ornament">✦ ✦ ✦</div>
+      <h1 class="error-heading">This page seems to have wandered off</h1>
+      <p class="error-subtext">
+        The page you are looking for may have been moved or does not exist.
+        Head back home or browse our collections below.
+      </p>
+      <div class="error-actions">
+        <a href="/home/" class="btn">Go to Homepage</a>
+        <a href="/home/products/" class="btn btn-outline">Browse Products</a>
+      </div>
+      <div class="error-divider"></div>
+      <p class="error-links-label">Our Collections</p>
+      <div class="error-product-links">
+        <a href="/product-detail/natasha/" class="error-product-link">Natasha</a>
+        <a href="/product-detail/asmita/" class="error-product-link">Asmita</a>
+        <a href="/product-detail/sara/" class="error-product-link">Sara</a>
+        <a href="/product-detail/princy/" class="error-product-link">Princy</a>
+        <a href="/product-detail/kyraah/" class="error-product-link">Kyraah</a>
+        <a href="/product-detail/sayani/" class="error-product-link">Sayani</a>
+        <a href="/product-detail/anjana/" class="error-product-link">Anjana</a>
+        <a href="/product-detail/parinita/" class="error-product-link">Parinita</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-logo">Kabir Fashions</div>
+          <p class="footer-description">Premium Indian clothing at affordable rates</p>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <div class="footer-links">
+            <a href="/home/">Home</a>
+            <a href="/home/products/">Products</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact">
+            <p>☎️ Phone: <a href="tel:+919327769799">+91 93277 69799</a></p>
+            <p>📩 Email: <a href="mailto:kabirfashions.kmt@gmail.com">kabirfashions.kmt@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© 2026 Kabir Fashions. All rights reserved.</div>
+        <div class="developer-credit">
+          Developed by: <a href="mailto:sukhwanimanav24@gmail.com">Manav Sukhwani</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

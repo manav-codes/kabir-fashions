@@ -4,6 +4,7 @@
 
 # Temporary files
 tmp/
+output/
 
 # OS files
 Thumbs.db
