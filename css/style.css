@@ -559,3 +559,48 @@ main {
 .lightbox__close:hover {
   opacity: 1;
 }
+
+/* ---------- About Page ---------- */
+.about-hero-image { text-align: center; }
+.about-hero-image img { width: 100%; border-radius: 8px; }
+
+/* ---------- Contact Form Utilities ---------- */
+.section-heading--sm {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.required-star {
+  color: #b00020;
+}
+
+.form-feedback {
+  display: none;
+}
+
+.form-feedback--success {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+
+.form-feedback--success .form-feedback__icon {
+  font-size: 3.5rem;
+  color: #2e7d32;
+}
+
+.form-feedback--success .form-feedback__title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-text-dark);
+  margin-top: 1rem;
+}
+
+.form-feedback--success .form-feedback__sub {
+  color: var(--color-text-mid);
+  margin-top: 0.5rem;
+}
+
+.form-feedback--error {
+  color: #b00020;
+  margin-top: 1rem;
+}

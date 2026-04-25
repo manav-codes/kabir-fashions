@@ -21,6 +21,7 @@
   <meta property="og:image" content="https://www.kabirfashions.in/images/logo.png" />
   <meta property="og:url" content="https://www.kabirfashions.in/contact/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
   <title>Contact Us | Kabir Fashions</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,9 +29,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" />
   <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
-    <!-- URL Tab logo/Icon -->
+  <!-- URL Tab logo/Icon -->
   <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
   <!-- Global and component styles -->
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/navbar.css" />
@@ -110,40 +113,37 @@
 
             <!-- Contact form with AJAX submission -->
             <div class="reveal">
-              <h2 class="section-heading" style="font-size: 1.5rem; margin-bottom: 1.25rem;">Help Us Reach You</h2>
+              <h2 class="section-heading section-heading--sm">Help Us Reach You</h2>
               <form id="contact-form" class="contact-form" method="POST">
                 <div class="form-group">
-                  <label for="name">Name <span style="color: red;">*</span></label>
-                  <input type="text" id="name" name="name" required />
+                  <label for="name">Name <span class="required-star" aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" required aria-required="true" />
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
                   <input type="email" id="email" name="email" />
                 </div>
                 <div class="form-group">
-                  <label for="phone">Phone Number <span style="color: red;">*</span></label>
+                  <label for="phone">Phone Number <span class="required-star" aria-hidden="true">*</span></label>
                   <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10"
-                    placeholder="10-digit phone number" required />
+                    placeholder="10-digit phone number" required aria-required="true" />
                 </div>
                 <div class="form-group">
-                  <label for="enquiry">Enquiry / Requirement <span style="color: red;">*</span></label>
+                  <label for="enquiry">Enquiry / Requirement <span class="required-star" aria-hidden="true">*</span></label>
                   <textarea id="enquiry" name="enquiry" rows="5" placeholder="Tell us what you're looking for..."
-                    required></textarea>
+                    required aria-required="true"></textarea>
                 </div>
                 <button type="submit" class="btn">
                   Submit
                 </button>
               </form>
-              <!-- Success message (hidden by default) -->
-              <div id="form-success" style="display: none; text-align: center; padding: 2.5rem 1rem;">
-                <div style="font-size: 3.5rem; color: #2e7d32;">&#10004;</div>
-                <p
-                  style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--color-text-dark); margin-top: 1rem;">
-                  We will contact you shortly!</p>
-                <p style="color: var(--color-text-mid); margin-top: 0.5rem;">Thank you for reaching out to Kabir
-                  Fashions.</p>
+              <!-- Success message (hidden by default, shown via JS style.display) -->
+              <div id="form-success" class="form-feedback form-feedback--success" aria-live="polite">
+                <div class="form-feedback__icon">&#10004;</div>
+                <p class="form-feedback__title">We will contact you shortly!</p>
+                <p class="form-feedback__sub">Thank you for reaching out to Kabir Fashions.</p>
               </div>
-              <p id="form-error" style="display: none; color: #b00020; margin-top: 1rem;">
+              <p id="form-error" class="form-feedback form-feedback--error" role="alert" aria-live="assertive">
                 Sorry, we could not send your enquiry. Please try again or contact us on WhatsApp.
               </p>
             </div>
@@ -224,7 +224,7 @@
         <div>
           <div class="footer-heading">Location</div>
           <div class="footer-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin" width="100%" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kabir Fashions location map"></iframe>
           </div>
         </div>
       </div>

@@ -105,3 +105,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+.footer-map iframe {
+  border: 0;
+  border-radius: 8px;
+}

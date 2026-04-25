@@ -122,6 +122,11 @@
   color: var(--color-text-light);
 }
 
+.filter-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 @media (max-width: 600px) {
   .filter-bar-inner {
     gap: 0.25rem;
