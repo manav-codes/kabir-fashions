@@ -1,15 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D8DBNHSVR9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D8DBNHSVR9');
+</script>
+  <!-- Meta information for Kabir Fashions homepage -->
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=home/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kabir Fashions offers premium Indian clothing, co-ord sets, and 3 piece sets with easy WhatsApp enquiries." />
+  <meta name="description" content="Explore Kabir Fashions premium Indian clothing catalogue with co-ord sets and 3 piece sets available for WhatsApp enquiries." />
   <link rel="canonical" href="https://www.kabirfashions.in/" />
-  <meta name="robots" content="noindex, follow" />
-  <title>Kabir Fashions</title>
+  <meta property="og:title" content="Kabir Fashions | Premium Indian Clothing Catalogue" />
+  <meta property="og:description" content="Explore Kabir Fashions premium Indian clothing catalogue with co-ord sets and 3 piece sets available for WhatsApp enquiries." />
+  <meta property="og:image" content="https://www.kabirfashions.in/images/logo.png" />
+  <meta property="og:url" content="https://www.kabirfashions.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <title>Kabir Fashions | Premium Indian Clothing Catalogue</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+  <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
+  <!-- URL Tab logo/Icon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <!-- Global and component styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/products.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="stylesheet" href="./css/animations.css" />
 </head>
+
 <body>
-  <p>Redirecting to <a href="home/">Kabir Fashions</a>...</p>
+  <!-- =========================
+         Global Site Header & Navbar
+         ========================= -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="navbar-inner container">
+        <!-- Brand logo / wordmark -->
+        <a href="/" class="navbar-logo">
+          <img src="./images/logo.png" alt="Kabir Fashions" />
+        </a>
+
+        <!-- Mobile navigation toggle (CSS-only hamburger) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+
+        <!-- Primary navigation links -->
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="#products">Products</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================
+         Main Content
+         ========================= -->
+  <main>
+    <!-- ===== Hero Section: Key brand statement ===== -->
+    <section class="hero section">
+      <div class="container">
+        <div class="content-card hero-card">
+          <p class="hero-label">NEW COLLECTION 2026</p>
+          <h1 class="hero-heading">Kabir Fashions</h1>
+          <p class="hero-subheading">
+            Crafted with care for everyday elegance.
+          </p>
+          <a href="#products" class="btn hero-cta">View Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Filter Bar (visual only, no JS) ===== -->
+    <section class="filter-bar">
+      <div class="container">
+        <div class="content-card filter-card">
+          <div class="filter-bar-inner">
+            <!-- NOTE: JavaScript-based filtering can be added later using these buttons -->
+            <button class="filter-btn filter-btn--active" type="button">
+              All
+            </button>
+            <button class="filter-btn" type="button">Co-ord Sets</button>
+            <button class="filter-btn" type="button">3 Piece Sets</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Product Grid: 20 products ===== -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="content-card">
+          <h2 class="section-heading reveal">Our Collection</h2>
+          <p class="section-subheading reveal">
+            Handpicked styles for every occasion.
+          </p>
+
+          <div class="product-grid grid grid-3">
+            <!-- Co-ord Sets -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/co-ord/natasha/1.jpeg" alt="Natasha Co-ord Set" fetchpriority="high"/>
+              </div>
+              <p class="product-card__category">Co-ord Set</p>
+              <h3 class="product-card__name">Natasha</h3>
+              <a href="./product-detail/natasha/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/co-ord/princy/1.webp" alt="Princy Co-ord Set" loading="lazy"/>
+              </div>
+              <p class="product-card__category">Co-ord Set</p>
+              <h3 class="product-card__name">Princy</h3>
+              <a href="./product-detail/princy/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/co-ord/sara/1.jpeg" alt="SARA Co-ord Set" loading="lazy"/>
+              </div>
+              <p class="product-card__category">Co-ord Set</p>
+              <h3 class="product-card__name">SARA</h3>
+              <a href="./product-detail/sara/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/co-ord/asmita/1.jpeg" alt="Asmita Co-ord Set" loading="lazy"/>
+              </div>
+              <p class="product-card__category">Co-ord Set</p>
+              <h3 class="product-card__name">Asmita</h3>
+              <a href="./product-detail/asmita/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+        
+
+            <!-- 3 Piece Sets -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/3-peice/kyraah/1.jpeg" alt="Kyraah 3 Piece Set" loading="lazy"/>
+              </div>
+              <p class="product-card__category">3 Piece Set</p>
+              <h3 class="product-card__name">Kyraah</h3>
+              <a href="./product-detail/kyraah/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/3-peice/sayani/sayani.jpg" alt="Sayani 3 Piece Set" loading="lazy"/>
+              </div>
+              <p class="product-card__category">3 Piece Set</p>
+              <h3 class="product-card__name">सयानी</h3>
+              <a href="./product-detail/sayani/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/3-peice/anjana/1.jpeg" alt="Anjana 3 Piece Set" loading="lazy"/>
+              </div>
+              <p class="product-card__category">3 Piece Set</p>
+              <h3 class="product-card__name">Anjana</h3>
+              <a href="./product-detail/anjana/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./images/products/3-peice/parinita/1.jpeg" alt="Parinita 3 Piece Set" loading="lazy"/>
+              </div>
+              <p class="product-card__category">3 Piece Set</p>
+              <h3 class="product-card__name">Parinita</h3>
+              <a href="./product-detail/parinita/" class="product-card__link">
+                View Details
+              </a>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WhatsApp Call-to-Action Banner ===== -->
+    <section class="whatsapp-cta reveal">
+      <div class="container whatsapp-cta-inner">
+        <div>
+          <h2 class="whatsapp-cta-heading">Interested in a product?</h2>
+          <p class="whatsapp-cta-subtext">
+            Contact us directly on WhatsApp for orders and enquiries.
+          </p>
+        </div>
+        <div>
+          <a href="https://wa.me/919327769799?text=Hi%2C%20I%20saw%20your%20website%2C%20I%20am%20interested%20in%20some%20products" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <img src="./images/whatsapp.svg" alt="" class="whatsapp-icon"> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+         Global Footer
+         ========================= -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <!-- Footer column: brand summary -->
+        <div>
+          <div class="footer-logo">Kabir Fashions</div>
+          <p class="footer-description">
+            Premium Indian clothing at affordable rates
+          </p>
+        </div>
+
+        <!-- Footer column: quick links -->
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <div class="footer-links">
+            <a href="/">Home</a>
+            <a href="#products">Products</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
+
+        <!-- Footer column: contact information -->
+        <div>
+          <div class="footer-heading">Contact</div>
+          <div class="footer-contact">
+            <p>☎️Phone: <a href="tel:+919327769799">+91 93277 69799</a></p>
+            <p>📩Email: <a href="mailto:kabirfashions.kmt@gmail.com">kabirfashions.kmt@gmail.com</a></p>
+            <p>📍 <a href="https://maps.app.goo.gl/dQk291GyWFwBMRjY8" target="_blank" rel="noopener noreferrer">
+                Kabir Fashions, E-501-502, Fifth Floor,<br>
+                Iscon Commercial Centre, VIP Market,<br>
+                Opp Safal 1, Raipur,<br>
+                Ahmedabad, Gujarat – 380001
+              </a></p>
+
+          </div>
+        </div>
+
+        <!-- Footer column: map location -->
+        <div>
+          <div class="footer-heading">Location</div>
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1836.1139972816768!2d72.6002375!3d23.0153995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85cdbc3467fd%3A0x6d8cbfbe88f7d764!2sIscon%20Commercial%20Complex!5e0!3m2!1sen!2sin!4v1774084861631!5m2!1sen!2sin" width="100%" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kabir Fashions location map"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© 2026 Kabir Fashions. All rights reserved.</div>
+        <div class="developer-credit">
+          Developed by: <a href="mailto:sukhwanimanav24@gmail.com">Manav Sukhwani</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/filter.js"></script>
+  <script src="./js/scroll-reveal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navToggle = document.getElementById('nav-toggle');
+      var productsSection = document.getElementById('products');
+      var isScrollingByTap = false;
+      var scrollUnlockTimer = null;
+
+      // Helper: close mobile menu
+      function closeMenu() {
+        if (navToggle) { navToggle.checked = false; }
+      }
+
+      // Helper: smooth scroll with fallback
+      function smoothScroll(top) {
+        try { window.scrollTo({ top: top, behavior: 'smooth' }); }
+        catch (e) { window.scrollTo(0, top); }
+      }
+
+      function beginTapScroll() {
+        isScrollingByTap = true;
+        if (scrollUnlockTimer) { clearTimeout(scrollUnlockTimer); }
+        scrollUnlockTimer = setTimeout(function() {
+          isScrollingByTap = false;
+        }, 500);
+      }
+
+      // --- Scroll to top: Home link & logo ---
+      var homeLink = document.querySelector('.nav-links a[href="/"]');
+      var logoLink = document.querySelector('.navbar-logo');
+
+      function scrollToTop(e) {
+        e.preventDefault();
+        if (isScrollingByTap) { return; }
+        beginTapScroll();
+        closeMenu();
+        smoothScroll(0);
+      }
+
+      if (homeLink) { homeLink.addEventListener('click', scrollToTop); }
+      if (logoLink) { logoLink.addEventListener('click', scrollToTop); }
+
+      // --- Scroll to products: intercept #products links (clean URL, no hash) ---
+      var productLinks = document.querySelectorAll('a[href="#products"]');
+      productLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (isScrollingByTap) { return; }
+          beginTapScroll();
+          closeMenu();
+          if (productsSection) {
+            var top = productsSection.getBoundingClientRect().top + window.pageYOffset - 70;
+            smoothScroll(top);
+          }
+        });
+      });
+
+      // --- Cross-page scroll: coming from /products/ redirect ---
+      var scrollTarget = sessionStorage.getItem('scrollTo');
+      if (scrollTarget === 'products' && productsSection) {
+        sessionStorage.removeItem('scrollTo');
+        // Small delay to let page render first
+        setTimeout(function() {
+          var top = productsSection.getBoundingClientRect().top + window.pageYOffset - 70;
+          smoothScroll(top);
+          history.replaceState(null, '', '/products/');
+        }, 100);
+      }
+    });
+  </script>
 </body>
+
 </html>

@@ -1,4 +1,21 @@
 {
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/home/products/",
+      "destination": "/products/",
+      "statusCode": 301
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ]
 }
