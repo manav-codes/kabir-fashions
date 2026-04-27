@@ -167,7 +167,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 2.5rem;
-  padding: 3rem 0;
+  padding: 0rem 0;
 }
 
 .product-gallery {
@@ -181,6 +181,25 @@
     align-self: start;
     position: sticky;
     top: 80px;
+    gap: 0.25rem;
+  }
+
+  .product-gallery .btn-back-overlay {
+    margin-bottom: 0;
+  }
+
+  .product-gallery__main {
+    padding: 0;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .product-gallery__main .carousel-slide {
+    max-height: 72vh;
+    width: auto;
+    max-width: 100%;
+    border-radius: 8px;
   }
 }
 
