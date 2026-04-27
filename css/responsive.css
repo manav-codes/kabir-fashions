@@ -198,3 +198,46 @@
     font-size: 0.88rem;
   }
 }
+
+/* ============================================================
+   Desktop above-the-fold compaction (min-width: 1024px)
+   Tightens hero, filter bar, and products section so that the
+   first row of product cards is visible without scrolling.
+   Mobile and tablet breakpoints above are untouched.
+   ============================================================ */
+@media (min-width: 1024px) {
+  /* Hero: remove forced min-height; trim outer and inner padding */
+  .hero {
+    min-height: 0;
+    padding: 1rem 0;
+  }
+  .hero-card {
+    padding: 22px 3rem;
+  }
+
+  /* Filter bar: slim the cream card and pill row */
+  .filter-card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .filter-bar-inner {
+    padding: 4px 0;
+  }
+  .filter-btn {
+    padding: 5px 0.8rem;
+  }
+
+  /* Products section: close the gap above the grid */
+  #products.section {
+    padding-top: 0.5rem;
+  }
+  #products .content-card {
+    padding-top: 1rem;
+    margin-top: 0.25rem;
+  }
+  #products .section-subheading {
+    margin-bottom: 0.75rem;
+  }
+}
